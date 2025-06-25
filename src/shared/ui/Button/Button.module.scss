@@ -1,0 +1,13 @@
+.default {
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  background: #fff;
+  color: black;
+  padding: 15px 16px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
