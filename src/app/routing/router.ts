@@ -14,7 +14,7 @@ export const route = createBrowserRouter([
         Component: HomePage,
       },
       {
-        path: ROUTES.PLAYERPAGE,
+        path: ROUTES.PLAYER,
         Component: PlayerPage,
       },
     ],
