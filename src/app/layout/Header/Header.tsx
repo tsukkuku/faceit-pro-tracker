@@ -1,4 +1,4 @@
-import { Button } from "@/shared/ui/Button";
+import { Button } from "@/shared/ui";
 import style from "./Header.module.scss";
 import { useNavigate } from "react-router-dom";
 
