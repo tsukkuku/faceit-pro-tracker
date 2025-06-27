@@ -1,7 +1,9 @@
 import { useLazyGetPlayerInfoQuery } from "@/modules/profile";
 import { Button, Input } from "@/shared/ui";
+import { FaSearch } from "react-icons/fa";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./SearchForm.module.scss";
 
 export const SearchForm = () => {
   const navigate = useNavigate();
@@ -19,14 +21,15 @@ export const SearchForm = () => {
   };
   return (
     <>
-      <h1>Hello World!</h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={style.form}>
         <Input
           placeholder="Введите ник игрока"
           value={value}
           onChange={handleChange}
         />
-        <Button>Click!</Button>
+        <Button variant="search-primary">
+          <FaSearch />
+        </Button>
       </form>
     </>
   );
