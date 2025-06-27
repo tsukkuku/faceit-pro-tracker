@@ -2,7 +2,11 @@ import clsx from "clsx";
 import style from "./Button.module.scss";
 import type { ButtonHTMLAttributes, FC } from "react";
 
-type ButtonVariant = "default";
+type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "search-primary"
+  | "search-secondary";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -10,7 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<ButtonProps> = ({
   children,
-  variant = "default",
+  variant = "primary",
   className,
   ...props
 }) => {
