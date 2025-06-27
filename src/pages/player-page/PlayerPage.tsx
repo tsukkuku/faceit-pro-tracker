@@ -1,6 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Button } from "@/shared/ui";
+import { useNavigate } from "react-router-dom";
 
 export const PlayerPage = () => {
-  const { id } = useParams();
-  return <div>Player {id} page</div>;
+  const navigate = useNavigate();
+  return (
+    <>
+      <div>Player ID Page</div>
+      <Button onClick={() => navigate(-1)}>Back</Button>
+    </>
+  );
 };
