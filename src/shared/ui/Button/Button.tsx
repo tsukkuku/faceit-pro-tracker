@@ -11,11 +11,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
   children,
   variant = "default",
-  onClick,
+  className,
   ...props
 }) => {
   return (
-    <button className={clsx(style[variant])} onClick={onClick} {...props}>
+    <button className={clsx(style[variant], className)} {...props}>
       {children}
     </button>
   );
