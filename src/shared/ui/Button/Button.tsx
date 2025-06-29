@@ -1,12 +1,8 @@
-import clsx from "clsx";
-import style from "./Button.module.scss";
 import type { ButtonHTMLAttributes, FC } from "react";
+import style from "./Button.module.scss";
+import clsx from "clsx";
 
-type ButtonVariant =
-  | "primary"
-  | "secondary"
-  | "search-primary"
-  | "search-secondary";
+type ButtonVariant = "primary" | "search-primary";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
