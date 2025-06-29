@@ -1,4 +1,4 @@
-import { useLazyGetPlayerInfoQuery } from "@/modules/profile";
+import { useLazyGetPlayerInfoQuery } from "@/modules/player";
 import { Button, Input } from "@/shared/ui";
 import { FaSearch } from "react-icons/fa";
 import { useState, type ChangeEvent, type FormEvent } from "react";

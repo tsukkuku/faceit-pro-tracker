@@ -1,4 +1,4 @@
-import { SearchForm } from "@/modules/profile";
+import { SearchForm } from "@/modules/player";
 
 export const HomePage = () => {
   return (
