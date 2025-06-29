@@ -27,6 +27,6 @@ export const getProfileApi = api.injectEndpoints({
 
 export const {
   useLazyGetPlayerInfoQuery,
-  useLazyGetPlayerMatchesQuery,
-  useLazyGetPlayerStatsQuery,
+  useGetPlayerMatchesQuery,
+  useGetPlayerStatsQuery,
 } = getProfileApi;
