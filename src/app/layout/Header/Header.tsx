@@ -1,6 +1,6 @@
-import { Button } from "@/shared/ui";
-import style from "./Header.module.scss";
 import { useNavigate } from "react-router-dom";
+import { ThemeToggle } from "@/modules/theme";
+import style from "./Header.module.scss";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -11,7 +11,8 @@ export const Header = () => {
         alt="FACEIT LOGO"
         onClick={() => navigate("/")}
       />
-      <Button>Войти</Button>
+      {/* Временно */}
+      <ThemeToggle />
     </header>
   );
 };
