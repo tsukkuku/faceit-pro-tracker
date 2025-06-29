@@ -16,8 +16,13 @@ export const SearchForm = () => {
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const result = await trigger(value.trim()).unwrap();
-    navigate(`/player/${result.player_id}`);
+    if (!value) return console.log("Поле не должно быть пустым");
+    try {
+      const result = await trigger(value.trim()).unwrap();
+      navigate(`/player/${result.player_id}`);
+    } catch (error: any) {
+      console.log(error.message);
+    }
   };
   return (
     <>
