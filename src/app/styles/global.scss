@@ -1,11 +1,35 @@
+:root {
+  --bg-color: #0f0f10;
+  --text-color: #fff;
+  --btn-text: black;
+  --btn-border: #fff;
+  --btn-primary: #fff;
+  --btn-search-primary: #b8b7b7;
+  --input-primary: #242424;
+  --input-border: #fff;
+}
+
+[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: black;
+  --btn-text: #fff;
+  --btn-border: #060505;
+  --btn-primary: #121111;
+  --btn-search-primary: #121111;
+  --input-primary: #b8b7b7;
+  --input-border: #121111;
+}
+
 #root,
 body,
 html {
   font-family: "Ubuntu", sans-serif;
-  background-color: #0f0f10;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  transition: 0.3s;
 }
