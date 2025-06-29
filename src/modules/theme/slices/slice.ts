@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getLocalStorage } from "@/modules/theme";
+import { getLocalStorage } from "../helpers/getLocalStorage";
 
 const initialState = {
   mode: getLocalStorage(),
@@ -14,11 +14,8 @@ export const themeSlice = createSlice({
 
       localStorage.setItem("theme", JSON.stringify(state.mode));
     },
-    setTheme: (state, action) => {
-      state.mode = action.payload;
-    },
   },
 });
 
-export const { toggleTheme, setTheme } = themeSlice.actions;
+export const { toggleTheme } = themeSlice.actions;
 export default themeSlice.reducer;
