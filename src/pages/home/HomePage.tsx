@@ -1,9 +1,10 @@
-import { SearchForm } from "@/modules/player";
+import { SearchForm, TopPlayers } from "@/modules/player";
 
 export const HomePage = () => {
   return (
     <>
       <SearchForm />
+      <TopPlayers />
     </>
   );
 };

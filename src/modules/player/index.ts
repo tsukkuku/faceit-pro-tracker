@@ -1,3 +1,2 @@
 export { SearchForm } from "./components/SearchForm/SearchForm";
-
-export { useLazyGetPlayerInfoQuery } from "./api/profileApi";
+export { TopPlayers } from "./components/TopPlayers/TopPlayers";
