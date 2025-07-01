@@ -18,7 +18,9 @@ const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       className={style.playerCard}
       onClick={() => navigate(`/player/${data?.player_id}`)}
     >
-      <img src={data?.avatar || NO_AVATAR} className={style.avatar} />
+      <div className={style.avatar}>
+        <img src={data?.avatar || NO_AVATAR} className={style.avatarPhoto} />
+      </div>
       <p className={style.nickname}>
         {data?.nickname}
         {data?.verified && <VscVerifiedFilled className={style.verified} />}
