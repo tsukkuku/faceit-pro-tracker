@@ -7,6 +7,7 @@
   --btn-search-primary: #b8b7b7;
   --input-primary: #242424;
   --input-border: #fff;
+  --drop-shadow: rgba(255, 255, 255, 0.3);
 }
 
 [data-theme="light"] {
@@ -18,6 +19,7 @@
   --btn-search-primary: #121111;
   --input-primary: #b8b7b7;
   --input-border: #121111;
+  --drop-shadow: rgba(0, 0, 0, 0.3);
 }
 
 #root,
