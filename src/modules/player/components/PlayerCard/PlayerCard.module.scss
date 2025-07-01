@@ -5,6 +5,7 @@
   align-items: center;
   gap: 10px;
   border: 1px solid var(--btn-border);
+  border-radius: 15px;
   padding: 35px;
   max-width: 170px;
   height: auto;
@@ -26,6 +27,16 @@
 }
 
 .nickname {
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
   font-size: 20px;
   font-weight: 700;
+
+  svg {
+    min-width: 20px;
+    filter: drop-shadow(2px 2px 4px var(--drop-shadow));
+  }
 }

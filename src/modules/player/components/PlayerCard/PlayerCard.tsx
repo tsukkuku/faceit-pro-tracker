@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useGetPlayerInfoQuery } from "../../api/profileApi";
 import type { PlayerRanked } from "../../api/types/player.types";
 import { NO_AVATAR } from "@/modules/player/constans/constans";
+import { VscVerifiedFilled } from "react-icons/vsc";
 import style from "./PlayerCard.module.scss";
 
 interface PlayerCardProps {
@@ -18,7 +19,10 @@ const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       onClick={() => navigate(`/player/${data?.player_id}`)}
     >
       <img src={data?.avatar || NO_AVATAR} className={style.avatar} />
-      <p className={style.nickname}>{data?.nickname}</p>
+      <p className={style.nickname}>
+        {data?.nickname}
+        {data?.verified && <VscVerifiedFilled className={style.verified} />}
+      </p>
     </div>
   );
 };
