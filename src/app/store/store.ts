@@ -1,4 +1,4 @@
-import { api } from "@/shared/api/api";
+import { api } from "@/shared/api";
 import { configureStore } from "@reduxjs/toolkit";
 import { themeReducer } from "@/modules/theme";
 

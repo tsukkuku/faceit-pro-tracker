@@ -1,5 +1,5 @@
 import { useEffect, type FC, type ReactNode } from "react";
-import { useAppSelector } from "@/shared/hooks/redux";
+import { useAppSelector } from "@/shared/hooks";
 
 interface ThemeProviderProps {
   children?: ReactNode;

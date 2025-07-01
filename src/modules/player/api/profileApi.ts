@@ -1,4 +1,4 @@
-import { api } from "@/shared/api/api";
+import { api } from "@/shared/api";
 import type { ApiResponse, Player } from "./types/player.types";
 import type { PlayerStats } from "./types/stats.types";
 
