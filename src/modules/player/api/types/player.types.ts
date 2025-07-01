@@ -15,3 +15,12 @@ export interface Player {
   games: GameStats;
   verified: boolean;
 }
+
+export interface PlayerRanked {
+  nickname: string;
+  position: number;
+}
+
+export interface ApiResponse {
+  items: PlayerRanked[];
+}
