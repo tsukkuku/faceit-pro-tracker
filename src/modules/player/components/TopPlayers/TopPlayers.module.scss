@@ -1,0 +1,16 @@
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.topPlayers {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.loader {
+  color: var(--text-color);
+}
