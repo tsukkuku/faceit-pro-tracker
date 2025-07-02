@@ -10,7 +10,7 @@ interface PlayerCardProps {
   player: PlayerRanked;
 }
 
-const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
+export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
   const navigate = useNavigate();
   const { data } = useGetPlayerInfoQuery(player.nickname);
   return (
@@ -29,5 +29,3 @@ const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
     </div>
   );
 };
-
-export default PlayerCard;

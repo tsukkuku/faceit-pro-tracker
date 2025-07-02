@@ -1,7 +1,7 @@
 import { useGetPlayerRankedQuery } from "../../api/profileApi";
 import { randomPlayers } from "../../helpers/randomPlayer";
-import PlayerCard from "../PlayerCard/PlayerCard";
 import { ScaleLoader } from "react-spinners";
+import { PlayerCard } from "../PlayerCard/PlayerCard";
 import style from "./TopPlayers.module.scss";
 
 export const TopPlayers = () => {
