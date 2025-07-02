@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useGetPlayerInfoQuery } from "../../api/profileApi";
 import type { PlayerRanked } from "../../api/types/player.types";
 import { NO_AVATAR } from "@/modules/player/constans/constans";
-import { VscVerifiedFilled } from "react-icons/vsc";
 import style from "./PlayerCard.module.scss";
+import { svg } from "@/shared/assets";
 
 interface PlayerCardProps {
   player: PlayerRanked;
@@ -23,8 +23,9 @@ const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       </div>
       <p className={style.nickname}>
         {data?.nickname}
-        {data?.verified && <VscVerifiedFilled className={style.verified} />}
+        {data?.verified && <img src={svg} alt="Verify - LOGO" />}
       </p>
+      <p>{player.position}</p>
     </div>
   );
 };
