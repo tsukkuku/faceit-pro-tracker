@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useGetPlayerInfoQuery } from "../../api/profileApi";
 import type { PlayerRanked } from "../../api/types/player.types";
 import { NO_AVATAR } from "@/modules/player/constans/constans";
+import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
+import { VerifySVG } from "@/shared/assets";
+import { getVariant } from "../../helpers/getVariant";
 import style from "./PlayerCard.module.scss";
-import { svg } from "@/shared/assets";
 
 interface PlayerCardProps {
   player: PlayerRanked;
@@ -23,9 +25,11 @@ export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       </div>
       <p className={style.nickname}>
         {data?.nickname}
-        {data?.verified && <img src={svg} alt="Verify - LOGO" />}
+        {data?.verified && <VerifySVG width={18} height={18} />}
       </p>
-      <p>{player.position}</p>
+      <PlayerPlace variant={getVariant(player.position)}>
+        #{player.position}
+      </PlayerPlace>
     </div>
   );
 };
