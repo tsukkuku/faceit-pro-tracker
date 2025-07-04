@@ -2,7 +2,11 @@ import type { ButtonHTMLAttributes, FC } from "react";
 import style from "./Button.module.scss";
 import clsx from "clsx";
 
-type ButtonVariant = "primary" | "search-primary" | "player-place";
+type ButtonVariant =
+  | "primary"
+  | "search-primary"
+  | "player-place"
+  | "toggle-theme";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
