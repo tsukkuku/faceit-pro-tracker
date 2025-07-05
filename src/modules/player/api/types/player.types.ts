@@ -7,6 +7,7 @@ export interface GameStats {
 export interface Player {
   activated_at: string;
   avatar: string;
+  cover_image: string;
   nickname: string;
   player_id: string;
   steam_id_64: string;
@@ -18,6 +19,7 @@ export interface Player {
 
 export interface PlayerRanked {
   nickname: string;
+  player_id: string;
   position: number;
 }
 
