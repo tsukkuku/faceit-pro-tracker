@@ -1,11 +1,10 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { useGetPlayerInfoQuery } from "../../api/profileApi";
-import type { PlayerRanked } from "../../api/types/player.types";
-import { NO_AVATAR } from "@/modules/player/constans/constans";
-import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
+import { useGetPlayerInfoQuery, type PlayerRanked } from "@/modules/player/api";
+import { NO_AVATAR } from "@/modules/player/constans";
 import { VerifySVG } from "@/shared/assets";
-import { getVariant } from "../../helpers/getVariant";
+import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
+import { getVariant } from "@/modules/player/helpers";
 import style from "./PlayerCard.module.scss";
 
 interface PlayerCardProps {
