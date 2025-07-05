@@ -10,19 +10,22 @@ import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
   const { id } = useParams();
-  const { data: playerInfo } = useGetPlayerInfoQuery(id || "");
+  const { data: playerInfo, isLoading } = useGetPlayerInfoQuery(id || "");
 
-  if (!playerInfo) return <ScaleLoader color="var(--text-color)" />;
+  if (isLoading) return <ScaleLoader color="var(--text-color)" />;
+  if (!playerInfo) return <p>Игрок не найден...</p>;
   return (
     <div className={style.playerBanner}>
       <img
         src={playerInfo.cover_image || NO_BACKGROUND}
         className={style.playerBackground}
+        alt="Player background"
       />
       <div className={style.playerHeader}>
         <img
           src={playerInfo.avatar || NO_AVATAR}
           className={style.playerAvatar}
+          alt="Player avatar"
         />
         <div className={style.playerTitle}>
           <div className={style.playerInfo}>
