@@ -18,10 +18,14 @@ export const useSavePlayers = (data: ApiResponse) => {
   }, [data?.items]);
 
   useEffect(() => {
-    window.onload = () => {
+    const handleLoad = () => {
       localStorage.removeItem("savedPlayers");
       setPlayers([]);
     };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return players;
