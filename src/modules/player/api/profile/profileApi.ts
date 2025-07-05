@@ -1,8 +1,14 @@
 import { api } from "@/shared/api";
 import type { PlayerStats } from "../types/stats.types";
+import type { Player } from "../types/player.types";
 
 export const profileApi = api.injectEndpoints({
   endpoints: (build) => ({
+    getPlayerInfo: build.query<Player, string>({
+      query: (id) => ({
+        url: `players/${id}`,
+      }),
+    }),
     getPlayerMatches: build.query<void, string>({
       query: (id) => ({
         url: `players/${id}/history`,
@@ -16,4 +22,8 @@ export const profileApi = api.injectEndpoints({
   }),
 });
 
-export const { useGetPlayerMatchesQuery, useGetPlayerStatsQuery } = profileApi;
+export const {
+  useGetPlayerInfoQuery,
+  useGetPlayerMatchesQuery,
+  useGetPlayerStatsQuery,
+} = profileApi;

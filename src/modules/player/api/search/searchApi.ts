@@ -3,7 +3,7 @@ import type { ApiResponse, Player } from "../types/player.types";
 
 export const searchApi = api.injectEndpoints({
   endpoints: (build) => ({
-    getPlayerInfo: build.query<Player, string>({
+    getPlayerID: build.query<Player, string>({
       query: (nickname) => ({
         url: "players",
         params: {
@@ -22,8 +22,4 @@ export const searchApi = api.injectEndpoints({
   }),
 });
 
-export const {
-  useLazyGetPlayerInfoQuery,
-  useGetPlayerRankedQuery,
-  useGetPlayerInfoQuery,
-} = searchApi;
+export const { useLazyGetPlayerIDQuery, useGetPlayerRankedQuery } = searchApi;
