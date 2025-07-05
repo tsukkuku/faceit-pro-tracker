@@ -5,6 +5,7 @@
 }
 
 .playerHeader {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -48,4 +49,8 @@
   font-size: 14px;
   font-weight: 600;
   color: gray;
+}
+
+.subscribeButton {
+  margin-left: auto;
 }

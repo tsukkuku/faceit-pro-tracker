@@ -5,6 +5,7 @@ import { VerifySVG } from "@/shared/assets";
 import { convertDate } from "@/modules/player/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { ScaleLoader } from "react-spinners";
+import { Button } from "@/shared/ui";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
@@ -40,6 +41,9 @@ export const PlayerBanner = () => {
               Пользователь с {convertDate(playerInfo.activated_at)}
             </p>
           </div>
+        </div>
+        <div className={style.subscribeButton}>
+          <Button>Подписаться</Button>
         </div>
       </div>
     </div>
