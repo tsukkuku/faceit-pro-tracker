@@ -1,4 +1,4 @@
-import { useLazyGetPlayerInfoQuery } from "@/modules/player/api";
+import { useLazyGetPlayerIDQuery } from "@/modules/player/api";
 import { Button, Input } from "@/shared/ui";
 import { FaSearch } from "react-icons/fa";
 import { useState, type ChangeEvent, type FormEvent } from "react";
@@ -8,7 +8,7 @@ import style from "./SearchForm.module.scss";
 export const SearchForm = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState<string>("");
-  const [trigger] = useLazyGetPlayerInfoQuery();
+  const [trigger] = useLazyGetPlayerIDQuery();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);

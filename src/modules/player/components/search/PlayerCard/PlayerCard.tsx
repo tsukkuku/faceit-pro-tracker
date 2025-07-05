@@ -13,7 +13,7 @@ interface PlayerCardProps {
 
 export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
   const navigate = useNavigate();
-  const { data } = useGetPlayerInfoQuery(player.nickname);
+  const { data } = useGetPlayerInfoQuery(player.player_id);
   return (
     <div
       className={style.playerCard}
