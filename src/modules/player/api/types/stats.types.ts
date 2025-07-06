@@ -1,10 +1,10 @@
 export interface PlayerStats {
   lifetime: {
-    matches: string;
-    avgKDRatio: string;
-    avgHeadshots: string;
-    longestWinStreak: string;
-    winrate: string;
-    recentResults: string[]
+    Matches: string;
+    "Average K/D Ratio": string;
+    "Average Headshots %": string;
+    "Longest Win Streak": string;
+    "Win Rate %": string;
+    "Recent Results": string[];
   };
 }
