@@ -4,6 +4,7 @@ import { useGetPlayerInfoQuery, type PlayerRanked } from "@/modules/player/api";
 import { NO_AVATAR } from "@/modules/player/constans";
 import { VerifySVG } from "@/shared/assets";
 import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
+import { Avatar } from "@/shared/ui";
 import { getVariant } from "@/modules/player/helpers";
 import style from "./PlayerCard.module.scss";
 
@@ -19,9 +20,7 @@ export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       className={style.playerCard}
       onClick={() => navigate(`/player/${data?.player_id}`)}
     >
-      <div className={style.avatar}>
-        <img src={data?.avatar || NO_AVATAR} className={style.avatarPhoto} />
-      </div>
+      <Avatar src={data?.avatar} fallback={NO_AVATAR} />
       <p className={style.nickname}>
         {data?.nickname}
         {data?.verified && <VerifySVG width={18} height={18} />}

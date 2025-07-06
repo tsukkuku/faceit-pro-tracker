@@ -5,7 +5,7 @@ import { VerifySVG } from "@/shared/assets";
 import { convertDate } from "@/modules/player/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { ScaleLoader } from "react-spinners";
-import { Button, Image } from "@/shared/ui";
+import { Avatar, Button, Image } from "@/shared/ui";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
@@ -23,10 +23,9 @@ export const PlayerBanner = () => {
         alt="Player background"
       />
       <div className={style.playerHeader}>
-        <Image
+        <Avatar
           src={playerInfo.avatar}
           fallback={NO_AVATAR}
-          className={style.playerAvatar}
           alt="Player avatar"
         />
         <div className={style.playerTitle}>

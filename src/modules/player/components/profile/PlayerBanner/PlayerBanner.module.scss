@@ -22,14 +22,6 @@
   transform: translateY(-100px);
 }
 
-.playerAvatar {
-  width: 120px;
-  height: 120px;
-  border: 1px solid var(--btn-border);
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .playerTitle {
   display: flex;
   flex-direction: column;
