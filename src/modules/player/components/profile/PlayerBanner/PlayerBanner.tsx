@@ -5,7 +5,7 @@ import { VerifySVG } from "@/shared/assets";
 import { convertDate } from "@/modules/player/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { ScaleLoader } from "react-spinners";
-import { Button } from "@/shared/ui";
+import { Button, Image } from "@/shared/ui";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
@@ -16,14 +16,16 @@ export const PlayerBanner = () => {
   if (!playerInfo) return <p>Игрок не найден...</p>;
   return (
     <div className={style.playerBanner}>
-      <img
-        src={playerInfo.cover_image || NO_BACKGROUND}
+      <Image
+        src={playerInfo.cover_image}
+        fallback={NO_BACKGROUND}
         className={style.playerBackground}
         alt="Player background"
       />
       <div className={style.playerHeader}>
-        <img
-          src={playerInfo.avatar || NO_AVATAR}
+        <Image
+          src={playerInfo.avatar}
+          fallback={NO_AVATAR}
           className={style.playerAvatar}
           alt="Player avatar"
         />
