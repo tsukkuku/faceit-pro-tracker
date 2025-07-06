@@ -1,0 +1,47 @@
+.statsCard {
+  width: 228px;
+  height: 118px;
+  border: 1px solid var(--btn-border);
+  border-radius: 7px;
+  padding: 32px;
+}
+
+.statsCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsCardValue {
+  width: 100%;
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.statsCardWrapper {
+  width: 100%;
+  text-align: center;
+
+  .textUpperCase {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.statResultValueWin {
+  color: #32d35a;
+}
+
+.statResultValueLose {
+  color: #ff002b;
+}

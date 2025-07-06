@@ -1,9 +1,10 @@
-import { PlayerBanner } from "@/modules/player";
+import { PlayerBanner, PlayerStats } from "@/modules/player";
 
 export const PlayerPage = () => {
   return (
     <>
       <PlayerBanner />
+      <PlayerStats />
     </>
   );
 };
