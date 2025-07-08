@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { LEVEL_ICONS } from "@/modules/player/constants";
 import { getVariant } from "@/modules/player/helpers";
-import { ProgressBar } from "../ProgresBar";
+import { ProgressBar } from "../ProgressBar";
 import { Elo } from "@/shared/assets";
 import { Image } from "@/shared/ui";
 import { PlayerPlace } from "@/modules/player/components/search/PlayerPlace";
