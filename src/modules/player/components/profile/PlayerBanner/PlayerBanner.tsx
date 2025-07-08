@@ -1,6 +1,6 @@
 import { useGetPlayerInfoQuery } from "@/modules/player/api";
 import { useParams } from "react-router-dom";
-import { NO_AVATAR, NO_BACKGROUND } from "@/modules/player/constans";
+import { NO_AVATAR, NO_BACKGROUND } from "@/modules/player/constants";
 import { VerifySVG } from "@/shared/assets";
 import { convertDate } from "@/modules/player/helpers";
 import ReactCountryFlag from "react-country-flag";

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetPlayerInfoQuery, type PlayerRanked } from "@/modules/player/api";
-import { NO_AVATAR } from "@/modules/player/constans";
+import { NO_AVATAR } from "@/modules/player/constants";
 import { VerifySVG } from "@/shared/assets";
 import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
 import { Avatar } from "@/shared/ui";
