@@ -1,6 +1,6 @@
 import { api } from "@/shared/api";
 import type { PlayerStats } from "../types/stats.types";
-import type { Player } from "../types/player.types";
+import type { Player, PlayerRanked } from "../types/player.types";
 
 export const profileApi = api.injectEndpoints({
   endpoints: (build) => ({
@@ -19,6 +19,11 @@ export const profileApi = api.injectEndpoints({
         url: `players/${id}/stats/cs2`,
       }),
     }),
+    getPlayerRankedPosition: build.query<PlayerRanked, string>({
+      query: (id) => ({
+        url: `rankings/games/cs2/regions/EU/players/${id}`,
+      }),
+    }),
   }),
 });
 
@@ -26,4 +31,5 @@ export const {
   useGetPlayerInfoQuery,
   useGetPlayerMatchesQuery,
   useGetPlayerStatsQuery,
+  useGetPlayerRankedPositionQuery,
 } = profileApi;

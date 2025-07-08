@@ -1,7 +1,8 @@
 export interface GameStats {
-  faceit_elo: number;
-  skill_level: string;
-  region: string;
+  cs2: {
+    faceit_elo: number;
+    skill_level: number;
+  };
 }
 
 export interface Player {

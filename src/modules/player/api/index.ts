@@ -2,6 +2,7 @@
 export {
   useGetPlayerInfoQuery,
   useGetPlayerStatsQuery,
+  useGetPlayerRankedPositionQuery,
 } from "./profile/profileApi";
 
 // Search

@@ -1,0 +1,1 @@
+export { PlayerPlace } from "./PlayerPlace";
