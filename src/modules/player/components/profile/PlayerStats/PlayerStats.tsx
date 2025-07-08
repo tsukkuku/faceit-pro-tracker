@@ -8,6 +8,7 @@ import style from "./PlayerStats.module.scss";
 export const PlayerStats = () => {
   const { id } = useParams();
   const { data } = useGetPlayerStatsQuery(id || "");
+
   if (!data) return <ScaleLoader color="var(--text-color)" />;
   return (
     <div className={style.playerStatsSection}>
