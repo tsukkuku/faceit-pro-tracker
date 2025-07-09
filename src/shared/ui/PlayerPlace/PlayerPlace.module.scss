@@ -1,0 +1,28 @@
+.default {
+  .rankIcon {
+    width: 30px;
+    height: 30px;
+    fill: rgb(232, 1, 40) !important;
+  }
+}
+
+.top1 {
+  background: #ffd336 !important;
+  .rankIcon {
+    fill: #ffd336 !important;
+  }
+}
+
+.top2 {
+  background: #def5ff !important;
+  .rankIcon {
+    fill: #def5ff !important;
+  }
+}
+
+.top3 {
+  background: #ff7236 !important;
+  .rankIcon {
+    fill: #ff7236 !important;
+  }
+}

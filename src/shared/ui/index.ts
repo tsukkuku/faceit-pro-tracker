@@ -1,3 +1,10 @@
+export { PlayerLevel } from "./PlayerLevel/PlayerLevel";
+
+export {
+  PlayerPlace,
+  type PlayerPlaceVariants,
+} from "./PlayerPlace/PlayerPlace";
+
 export { Avatar } from "./Avatar/Avatar";
 
 export { Image } from "./Image/Image";

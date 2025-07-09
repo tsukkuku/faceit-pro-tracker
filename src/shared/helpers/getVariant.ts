@@ -1,4 +1,4 @@
-import type { PlayerPlaceVariants } from "../components/search/PlayerPlace/PlayerPlace";
+import type { PlayerPlaceVariants } from "@/shared/ui";
 
 export const getVariant = (position: number): PlayerPlaceVariants => {
   if (position === 1) return "top1";
