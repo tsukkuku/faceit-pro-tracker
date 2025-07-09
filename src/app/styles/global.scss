@@ -12,6 +12,8 @@
   --bg-color-profile: #121212;
   --border-profile: rgba(241, 241, 241, 0.16);
   --progress-bar: rgba(255, 85, 0, 0.08);
+  --table-bg: rgb(36, 36, 36);
+  --map-label-bg: rgb(27, 27, 27);
 }
 
 [data-theme="light"] {
@@ -28,6 +30,8 @@
   --bg-color-profile: #fff;
   --border-profile: rgba(0, 0, 0, 0.35);
   --progress-bar: rgba(0, 0, 0);
+  --table-bg: rgb(183, 183, 183);
+  --map-label-bg: rgb(226, 226, 226);
 }
 
 #root,

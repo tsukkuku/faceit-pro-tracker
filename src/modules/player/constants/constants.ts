@@ -16,6 +16,21 @@ export const STATS_CARD = [
   "Average Headshots %",
 ] as const;
 
+export const KEYS = [
+  "Matches",
+  "Win Rate %",
+  "Average Kills",
+  "Average Deaths",
+  "Average Assists",
+  "Average K/R Ratio",
+  "Average K/D Ratio",
+  "Headshots per Match",
+  "Average Headshots %",
+  "Average Triple Kills",
+  "Average Quadro Kills",
+  "Average Penta Kills",
+] as const;
+
 export const LEVEL_ICONS = {
   10: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/10_v2.svg",
   9: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/09_v2.svg",

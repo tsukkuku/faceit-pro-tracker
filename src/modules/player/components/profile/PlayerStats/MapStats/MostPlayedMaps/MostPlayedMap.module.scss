@@ -1,0 +1,63 @@
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mapImage {
+  border-radius: 10px;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+}
+
+.mapStatsInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mapStatsDetail {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    border-right: 1px solid var(--btn-border);
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+  }
+}
+
+.mapWinRate {
+  color: #ff5500;
+}
+
+.mapMatches {
+  color: #32d35a;
+}
+
+.mapLabel {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: var(--map-label-bg);
+  border-radius: 4px;
+  bottom: 55px;
+
+  span {
+    color: var(--text-color);
+    font-weight: 700;
+  }
+}

@@ -9,6 +9,7 @@ import { StatsCard } from "./StatsCard";
 import { SkillLevel } from "./SkillLevel";
 import { ScaleLoader } from "react-spinners";
 import style from "./PlayerStats.module.scss";
+import { MapStats } from "./MapStats/MapStats";
 
 export const PlayerStats = () => {
   const { id } = useParams();
@@ -27,6 +28,9 @@ export const PlayerStats = () => {
           <StatsCard key={stat} value={data.lifetime[stat]} wrapper={stat} />
         ))}
       </div>
+      <div className={style.skillLevelSectionTitle}>
+        Эло и уровень мастерства
+      </div>
       {playerLvl?.games.cs2.skill_level && (
         <div className={style.skillLevelSection}>
           <SkillLevel
@@ -36,6 +40,10 @@ export const PlayerStats = () => {
           />
         </div>
       )}
+      <div className={style.mapStatsSection}>
+        <div className={style.mapStatsTitle}>Статистика на картах</div>
+        <MapStats stats={data} />
+      </div>
     </div>
   );
 };

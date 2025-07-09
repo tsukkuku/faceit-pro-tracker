@@ -1,0 +1,51 @@
+.mapStatsTable {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: var(--bg-color);
+  border: 1px solid var(--btn-border);
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+tr:nth-child(2n) {
+  background-color: var(--table-bg);
+  transition: 0.3s;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--card-background);
+  }
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  text-align: start;
+  color: gray;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+td {
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.mostPlayedMaps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
