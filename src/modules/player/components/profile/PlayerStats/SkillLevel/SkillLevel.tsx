@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import { ProgressBar } from "../ProgressBar";
 import { EloInfo } from "../EloInfo";
+import { PlayerLevel } from "@/shared/ui";
 import style from "./SkillLevel.module.scss";
-import { PlayerLevel } from "@/shared/ui/PlayerLevel/PlayerLevel";
 
 interface SkillLevelProps {
   elo: number;
