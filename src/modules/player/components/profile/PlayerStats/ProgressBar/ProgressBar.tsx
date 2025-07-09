@@ -5,29 +5,27 @@ import style from "./ProgressBar.module.scss";
 interface ProgressBarProps {
   elo: number;
   currentLevel: number;
-  futureLevel: number;
+  nextLevel: number;
 }
 
 export const ProgressBar: FC<ProgressBarProps> = ({
   elo,
   currentLevel,
-  futureLevel,
+  nextLevel,
 }) => {
-  const minAndMax = levels.find((item) => item.level === currentLevel);
+  const level = levels.find((item) => item.level === currentLevel);
   return elo < 2001 ? (
     <div className={style.progressBarContainer}>
       <span className={style.textProgress}>{currentLevel} уровень</span>
       <meter
         className={style.progressBar}
-        min={minAndMax?.min}
+        min={level?.min}
         value={elo}
-        max={minAndMax?.max}
+        max={level?.max}
       />
-      <span className={style.textProgress}>{futureLevel} уровень</span>
+      <span className={style.textProgress}>{nextLevel} уровень</span>
     </div>
   ) : (
-    <span style={{ fontSize: "16px", fontWeight: 700 }}>
-      Максимальный уровень!
-    </span>
+    <span className={style.maxLevelText}>Максимальный уровень!</span>
   );
 };

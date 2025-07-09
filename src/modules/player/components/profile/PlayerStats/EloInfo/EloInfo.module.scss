@@ -1,0 +1,58 @@
+.skillLevelContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid var(--btn-border);
+  width: 290px;
+  height: 288px;
+
+  .skillLevelTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.skillLevelElo {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.weekendResultsContainer {
+  display: flex;
+  flex-direction: column;
+
+  .text {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .weekendResultsText {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+
+    .weekendResultsWins {
+      color: #32d35a;
+    }
+
+    .weekendResultsLoses {
+      color: #ff002b;
+    }
+  }
+}
