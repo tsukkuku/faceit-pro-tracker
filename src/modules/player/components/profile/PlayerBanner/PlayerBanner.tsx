@@ -2,7 +2,7 @@ import { useGetPlayerInfoQuery } from "@/modules/player/api";
 import { useParams } from "react-router-dom";
 import { NO_AVATAR, NO_BACKGROUND } from "@/modules/player/constants";
 import { VerifySVG } from "@/shared/assets";
-import { convertDate } from "@/modules/player/helpers";
+import { formatDate } from "@/shared/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { ScaleLoader } from "react-spinners";
 import { Avatar, Button, Image } from "@/shared/ui";
@@ -42,7 +42,7 @@ export const PlayerBanner = () => {
               </div>
             </h1>
             <p className={style.playerActivatedAt}>
-              Пользователь с {convertDate(playerInfo.activated_at)}
+              Пользователь с {formatDate(playerInfo.activated_at)}
             </p>
           </div>
         </div>
