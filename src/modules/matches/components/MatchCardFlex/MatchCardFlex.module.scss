@@ -1,0 +1,53 @@
+.matchCardFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--btn-border);
+  transition: 0.3s;
+
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+    background: var(--card-background);
+  }
+}
+
+.matchCardFlexContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statsColumn {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardFlexValue {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.cardFlexWin {
+  text-transform: uppercase;
+  color: #32d35a;
+  font-weight: 700;
+}
+
+.cardFlexLose {
+  text-transform: uppercase;
+  color: #ff002b;
+  font-weight: 700;
+}
+
+.cardFlexImage {
+  border-radius: 10px;
+}

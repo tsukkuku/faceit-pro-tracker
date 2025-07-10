@@ -1,3 +1,4 @@
+import { MatchList } from "@/modules/matches";
 import { PlayerBanner, PlayerStats } from "@/modules/player";
 
 export const PlayerPage = () => {
@@ -5,6 +6,7 @@ export const PlayerPage = () => {
     <>
       <PlayerBanner />
       <PlayerStats />
+      <MatchList />
     </>
   );
 };

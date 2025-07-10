@@ -7,6 +7,7 @@
 .mapImage {
   border-radius: 10px;
   width: 100%;
+  transition: 0.3s;
 
   &:hover {
     cursor: pointer;

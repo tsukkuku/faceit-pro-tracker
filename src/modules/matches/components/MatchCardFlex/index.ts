@@ -1,0 +1,1 @@
+export { MatchCardFlex } from "./MatchCardFlex";

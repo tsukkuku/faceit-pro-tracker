@@ -9,11 +9,6 @@ export const profileApi = api.injectEndpoints({
         url: `players/${id}`,
       }),
     }),
-    getPlayerMatches: build.query<void, string>({
-      query: (id) => ({
-        url: `players/${id}/history`,
-      }),
-    }),
     getPlayerStats: build.query<PlayerStats, string>({
       query: (id) => ({
         url: `players/${id}/stats/cs2`,
@@ -29,7 +24,6 @@ export const profileApi = api.injectEndpoints({
 
 export const {
   useGetPlayerInfoQuery,
-  useGetPlayerMatchesQuery,
   useGetPlayerStatsQuery,
   useGetPlayerRankedPositionQuery,
 } = profileApi;
