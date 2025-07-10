@@ -5,11 +5,11 @@ import {
 } from "@/modules/player/api";
 import { useParams } from "react-router-dom";
 import { STATS_CARD } from "@/modules/player/constants";
+import { ScaleLoader } from "react-spinners";
 import { StatsCard } from "./StatsCard";
 import { SkillLevel } from "./SkillLevel";
-import { ScaleLoader } from "react-spinners";
+import { MapStats } from "./MapStats";
 import style from "./PlayerStats.module.scss";
-import { MapStats } from "./MapStats/MapStats";
 
 export const PlayerStats = () => {
   const { id } = useParams();

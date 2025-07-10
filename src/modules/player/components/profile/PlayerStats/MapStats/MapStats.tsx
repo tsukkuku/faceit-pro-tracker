@@ -1,12 +1,9 @@
-import type {
-  PlayerMap,
-  PlayerStats,
-} from "@/modules/player/api/types/stats.types";
+import type { PlayerMap, PlayerStats } from "@/modules/player/api";
 import { KEYS } from "@/modules/player/constants";
 import { useState, type FC } from "react";
-import style from "./MapStats.module.scss";
 import { Button } from "@/shared/ui";
-import { MostPlayedMap } from "./MostPlayedMaps/MostPlayedMap";
+import { MostPlayedMap } from "./MostPlayedMaps";
+import style from "./MapStats.module.scss";
 
 interface MapStatsProps {
   stats: PlayerStats;

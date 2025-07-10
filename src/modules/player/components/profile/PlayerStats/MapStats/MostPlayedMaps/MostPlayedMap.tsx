@@ -1,6 +1,6 @@
 import type { FC } from "react";
+import type { PlayerMap } from "@/modules/player/api";
 import style from "./MostPlayedMap.module.scss";
-import type { PlayerMap } from "@/modules/player/api/types/stats.types";
 
 interface MostPlayedMapsProps {
   maps: PlayerMap;
