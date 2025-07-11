@@ -1,7 +1,5 @@
 .matchCardFlex {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+  padding: 8px;
   border-radius: 10px;
   border: 1px solid var(--btn-border);
   transition: 0.3s;
@@ -49,5 +47,5 @@
 }
 
 .cardFlexImage {
-  border-radius: 10px;
+  border-radius: 7px;
 }

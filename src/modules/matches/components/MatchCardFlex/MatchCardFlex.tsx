@@ -22,7 +22,7 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
       <div className={style.matchCardFlex}>
         <div className={style.matchCardFlexContent}>
           <div className={style.statsColumn}>
-            <div className={style.cardFlexValue}>
+            <div className={style.cardFlexValue} style={{ width: "180px" }}>
               {formatDate(match.stats["Match Finished At"])}
             </div>
           </div>

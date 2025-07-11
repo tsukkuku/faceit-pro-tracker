@@ -13,10 +13,11 @@ export const MAP_IMAGES: Record<string, string> = {
     "https://assets.faceit-cdn.net/third_party/games/ce652bd4-0abb-4c90-9936-1133965ca38b/assets/votables/15ff938d-a70d-4d0b-9bf9-6be215cdb193_1695819151395.jpeg",
   de_train:
     "https://assets.faceit-cdn.net/third_party/games/ce652bd4-0abb-4c90-9936-1133965ca38b/assets/votables/6c361bc4-00bf-4700-8d4d-48ab5ae3df1f_1695827671063.jpeg",
+  de_vertigo:
+    "https://assets.faceit-cdn.net/third_party/games/ce652bd4-0abb-4c90-9936-1133965ca38b/assets/votables/57652f05-ce5a-4c89-8211-d9eb79a399f1_1695819175416.jpeg",
 } as const;
 
 export const MATCH_HEADERS = [
-  "Дата",
   "Режим",
   "Результат",
   "Счет",

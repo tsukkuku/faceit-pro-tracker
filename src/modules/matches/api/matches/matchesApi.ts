@@ -3,9 +3,10 @@ import type { Matches } from "../types/match.types";
 
 export const matchesApi = api.injectEndpoints({
   endpoints: (build) => ({
-    getPlayerMatchStats: build.query<Matches, string>({
-      query: (id) => ({
+    getPlayerMatchStats: build.query<Matches, { id: string; to: number }>({
+      query: ({ id, to }) => ({
         url: `players/${id}/games/cs2/stats`,
+        ...(to && { params: { to } }),
       }),
     }),
     getMatchInfo: build.query<void, string>({
