@@ -18,6 +18,8 @@ export const MatchList = () => {
 
   const { match, ref, hasMore } = usePagination(matches!);
 
+  if (isLoading || !match.length) return;
+
   return (
     <>
       {!isLoading && (
@@ -47,7 +49,7 @@ export const MatchList = () => {
             style={{ width: "100%", height: "20px", textAlign: "center" }}
           >
             {isFetching && <ClipLoader color="var(--text-color)" />}
-            {!hasMore && <p>Матчей больше нет :(</p>}
+            {!hasMore && <p>У игрока больше нету матчей в Counter Strike 2</p>}
           </div>
         </div>
       )}
