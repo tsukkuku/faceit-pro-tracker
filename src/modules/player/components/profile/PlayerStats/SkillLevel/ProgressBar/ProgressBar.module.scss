@@ -7,15 +7,24 @@
 
   .textProgress {
     width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
+    transform: translateY(-15px);
+  }
+
+  .eloForLevel {
+    font-weight: 400;
+    color: gray;
   }
 }
 
 .progressBar {
   width: 100%;
   height: 20px;
+  transform: translateY(-15px);
 
   &::-webkit-meter-bar {
     background: var(--progress-bar);

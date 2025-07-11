@@ -55,3 +55,11 @@ export const levels = [
   { level: 8, min: 1531, max: 1750 },
   { level: 9, min: 1751, max: 2000 },
 ];
+
+export const REGION_FLAG: Record<string, string> = {
+  EU: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/europe.svg",
+  NA: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/north_america.svg",
+  SA: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/south_america.svg",
+  SEA: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/asia.svg",
+  OCE: "https://cdn-frontend.faceit-cdn.net/web-next/_next/static/media/oceania.svg",
+};

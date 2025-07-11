@@ -16,14 +16,20 @@ export const ProgressBar: FC<ProgressBarProps> = ({
   const level = levels.find((item) => item.level === currentLevel);
   return elo < 2001 ? (
     <div className={style.progressBarContainer}>
-      <span className={style.textProgress}>{currentLevel} уровень</span>
+      <div className={style.textProgress}>
+        {currentLevel} уровень
+        <span className={style.eloForLevel}>{level?.min}</span>
+      </div>
       <meter
         className={style.progressBar}
         min={level?.min}
         value={elo}
         max={level?.max}
       />
-      <span className={style.textProgress}>{nextLevel} уровень</span>
+      <div className={style.textProgress}>
+        {nextLevel} уровень
+        <span className={style.eloForLevel}>{level?.max}</span>
+      </div>
     </div>
   ) : (
     <span className={style.maxLevelText}>Максимальный уровень!</span>

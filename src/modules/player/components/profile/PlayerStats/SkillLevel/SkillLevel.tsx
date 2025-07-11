@@ -3,29 +3,66 @@ import { ProgressBar } from "./ProgressBar";
 import { EloInfo } from "./EloInfo";
 import { PlayerLevel } from "@/shared/ui";
 import style from "./SkillLevel.module.scss";
+import {
+  useGetPlayerRankedCountryPositionQuery,
+  useGetPlayerRankedRegionPositionQuery,
+  type Player,
+} from "@/modules/player/api";
+import { PositionCard } from "./PositionCard";
 
 interface SkillLevelProps {
+  id: string;
+  player: Player;
   elo: number;
-  skill_level: number;
-  position: number;
 }
 
-export const SkillLevel: FC<SkillLevelProps> = ({
-  skill_level,
-  position,
-  elo,
-}) => {
+export const SkillLevel: FC<SkillLevelProps> = ({ elo, id, player }) => {
+  const { data: position } = useGetPlayerRankedRegionPositionQuery({
+    id,
+    region: player.games.cs2.region,
+  });
+  const { data: countryPosition } = useGetPlayerRankedCountryPositionQuery({
+    id,
+    region: player.games.cs2.region,
+    country: player?.country,
+  });
+
   return (
     <>
       <EloInfo elo={elo} />
       <div className={style.skillLevelContainer}>
-        <h3 className={style.skillLevelTitle}>Уровень мастерства</h3>
-        <PlayerLevel skill_level={skill_level} position={position} />
+        <div className={style.skillLevelTitle}>Уровень мастерства</div>
+        {position && (
+          <PlayerLevel
+            skill_level={player.games.cs2.skill_level}
+            position={position.position}
+          />
+        )}
         <ProgressBar
           elo={elo}
-          currentLevel={skill_level}
-          nextLevel={skill_level + 1}
+          currentLevel={player.games.cs2.skill_level}
+          nextLevel={player.games.cs2.skill_level + 1}
         />
+      </div>
+      <div className={style.skillLevelContainer}>
+        {position && (
+          <PositionCard
+            titleCard="Место в регионе"
+            player={player}
+            position={position}
+            variant="region"
+          />
+        )}
+      </div>
+      <div className={style.skillLevelContainer}>
+        {countryPosition && (
+          <PositionCard
+            titleCard="Место по стране"
+            player={player}
+            countryPosition={countryPosition}
+            variant="country"
+          />
+        )}
       </div>
     </>
   );

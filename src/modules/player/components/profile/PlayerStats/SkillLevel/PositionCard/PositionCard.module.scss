@@ -1,0 +1,21 @@
+.positionInTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  .position {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .country {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

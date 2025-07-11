@@ -1,0 +1,1 @@
+export { LastMatchesStats } from "./LastMatchesStats";

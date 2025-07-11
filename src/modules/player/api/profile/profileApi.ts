@@ -1,6 +1,11 @@
 import { api } from "@/shared/api";
 import type { PlayerStats } from "../types/stats.types";
-import type { Player, PlayerRanked } from "../types/player.types";
+import type {
+  Player,
+  PlayerLastMatches,
+  PlayerRanked,
+  PlayerRankedPosition,
+} from "../types/player.types";
 
 export const profileApi = api.injectEndpoints({
   endpoints: (build) => ({
@@ -14,12 +19,32 @@ export const profileApi = api.injectEndpoints({
         url: `players/${id}/stats/cs2`,
       }),
     }),
-    getPlayerRankedPosition: build.query<PlayerRanked, string>({
-      query: (id) => ({
-        url: `rankings/games/cs2/regions/EU/players/${id}`,
+    getPlayerRankedRegionPosition: build.query<
+      PlayerRanked,
+      PlayerRankedPosition
+    >({
+      query: ({ id, region }) => ({
+        url: `rankings/games/cs2/regions/${region}/players/${id}`,
         params: {
           limit: 1,
         },
+      }),
+    }),
+    getPlayerRankedCountryPosition: build.query<
+      PlayerRanked,
+      PlayerRankedPosition
+    >({
+      query: ({ id, country, region }) => ({
+        url: `rankings/games/cs2/regions/${region}/players/${id}`,
+        params: {
+          country,
+          limit: 1,
+        },
+      }),
+    }),
+    getLastMatchesInfo: build.query<PlayerLastMatches, string>({
+      query: (id) => ({
+        url: `players/${id}/games/cs2/stats`,
       }),
     }),
   }),
@@ -28,5 +53,7 @@ export const profileApi = api.injectEndpoints({
 export const {
   useGetPlayerInfoQuery,
   useGetPlayerStatsQuery,
-  useGetPlayerRankedPositionQuery,
+  useGetPlayerRankedRegionPositionQuery,
+  useGetPlayerRankedCountryPositionQuery,
+  useGetLastMatchesInfoQuery,
 } = profileApi;

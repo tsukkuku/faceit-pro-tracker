@@ -2,13 +2,13 @@ import type { FC } from "react";
 import style from "./StatsCard.module.scss";
 
 interface StatsCardProps {
-  value: string | string[];
+  value: string | number | string[];
   wrapper: string;
 }
 
 export const StatsCard: FC<StatsCardProps> = ({ value, wrapper }) => {
   const formatValue = () => {
-    if (typeof value === "string") {
+    if (typeof value === "string" || typeof value === "number") {
       return value;
     }
     return value?.map((result, index) => (
