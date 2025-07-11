@@ -1,8 +1,8 @@
 import { useGetLastMatchesInfoQuery } from "@/modules/player/api";
 import { type FC } from "react";
-import style from "./LastMatchesStats.module.scss";
 import { StatsCard } from "../StatsCard";
 import { useGetLastMatchesStats } from "@/modules/player/hooks";
+import style from "./LastMatchesStats.module.scss";
 
 interface LastMatchesStatsProps {
   id: string;

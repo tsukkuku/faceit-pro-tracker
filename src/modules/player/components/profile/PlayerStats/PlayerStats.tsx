@@ -34,7 +34,6 @@ export const PlayerStats = () => {
         <SkillLevel
           player={playerLvl}
           id={id}
-          elo={playerLvl.games.cs2.faceit_elo}
         />
       </div>
 

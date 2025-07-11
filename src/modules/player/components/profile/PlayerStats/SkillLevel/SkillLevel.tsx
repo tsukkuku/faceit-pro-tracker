@@ -13,10 +13,9 @@ import { PositionCard } from "./PositionCard";
 interface SkillLevelProps {
   id: string;
   player: Player;
-  elo: number;
 }
 
-export const SkillLevel: FC<SkillLevelProps> = ({ elo, id, player }) => {
+export const SkillLevel: FC<SkillLevelProps> = ({ id, player }) => {
   const { data: position } = useGetPlayerRankedRegionPositionQuery({
     id,
     region: player.games.cs2.region,
@@ -29,7 +28,7 @@ export const SkillLevel: FC<SkillLevelProps> = ({ elo, id, player }) => {
 
   return (
     <>
-      <EloInfo elo={elo} />
+      <EloInfo elo={player.games.cs2.faceit_elo} />
       <div className={style.skillLevelContainer}>
         <div className={style.skillLevelTitle}>Уровень мастерства</div>
         {position && (
@@ -39,7 +38,7 @@ export const SkillLevel: FC<SkillLevelProps> = ({ elo, id, player }) => {
           />
         )}
         <ProgressBar
-          elo={elo}
+          elo={player.games.cs2.faceit_elo}
           currentLevel={player.games.cs2.skill_level}
           nextLevel={player.games.cs2.skill_level + 1}
         />
