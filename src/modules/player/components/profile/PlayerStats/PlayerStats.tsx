@@ -19,7 +19,7 @@ export const PlayerStats = () => {
 
   if (isLoading) return <ScaleLoader color="var(--text-color)" />;
   if (!data) return <p>У игрока нету статистики в Counter Strike 2</p>;
-  if (!position) return <p>Error</p>;
+  if (!position) return <p>Error Loading</p>;
   return (
     <div className={style.playerStatsSection}>
       <h1>Статистика за всё время</h1>
@@ -36,7 +36,7 @@ export const PlayerStats = () => {
           <SkillLevel
             elo={playerLvl.games.cs2.faceit_elo}
             skill_level={playerLvl?.games.cs2.skill_level}
-            position={position.position}
+            position={position?.position}
           />
         </div>
       )}

@@ -17,6 +17,9 @@ export const profileApi = api.injectEndpoints({
     getPlayerRankedPosition: build.query<PlayerRanked, string>({
       query: (id) => ({
         url: `rankings/games/cs2/regions/EU/players/${id}`,
+        params: {
+          limit: 1,
+        },
       }),
     }),
   }),
