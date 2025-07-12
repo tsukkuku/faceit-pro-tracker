@@ -10,27 +10,28 @@ export const useGetLastMatchesStats = (data: PlayerLastMatches) => {
     Headshots: Number(item.stats["Headshots %"]),
   }));
   const kills = Math.round(
-    killsInt?.reduce((acc, curr) => acc + curr.kills, 0) / 20
+    killsInt?.reduce((acc, curr) => acc + curr.kills, 0) / 30
   );
-  const ADR = (killsInt?.reduce((acc, curr) => acc + curr.ADR, 0) / 20).toFixed(
+  const ADR = (killsInt?.reduce((acc, curr) => acc + curr.ADR, 0) / 30).toFixed(
     2
   );
-  const KD = (killsInt?.reduce((acc, curr) => acc + curr.KD, 0) / 20).toFixed(
+  const KD = (killsInt?.reduce((acc, curr) => acc + curr.KD, 0) / 30).toFixed(
     2
   );
-  const KR = (killsInt?.reduce((acc, curr) => acc + curr.KR, 0) / 20).toFixed(
+  const KR = (killsInt?.reduce((acc, curr) => acc + curr.KR, 0) / 30).toFixed(
     2
   );
   const headshots = Math.round(
-    killsInt?.reduce((acc, curr) => acc + curr.Headshots, 0) / 20
+    killsInt?.reduce((acc, curr) => acc + curr.Headshots, 0) / 30
   );
 
-  const winRate =
+  const winRate = (
     (100 *
       killsInt?.reduce((acc, curr) => {
         return curr.results === 1 ? acc + 1 : acc;
       }, 0)) /
-    20;
+    30
+  ).toFixed();
 
   return { kills, ADR, KD, KR, headshots, winRate };
 };

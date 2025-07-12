@@ -45,6 +45,9 @@ export const profileApi = api.injectEndpoints({
     getLastMatchesInfo: build.query<PlayerLastMatches, string>({
       query: (id) => ({
         url: `players/${id}/games/cs2/stats`,
+        params: {
+          limit: 30,
+        },
       }),
     }),
   }),

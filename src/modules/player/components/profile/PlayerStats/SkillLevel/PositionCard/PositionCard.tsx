@@ -24,8 +24,8 @@ export const PositionCard: FC<PositionCardProps> = ({
 }) => {
   const positionNumber =
     variant === "region"
-      ? position?.position ?? "N/A"
-      : countryPosition?.position ?? "N/A";
+      ? position?.position.toLocaleString() ?? "N/A"
+      : countryPosition?.position.toLocaleString() ?? "N/A";
 
   const location =
     variant === "region"
@@ -50,9 +50,9 @@ export const PositionCard: FC<PositionCardProps> = ({
 
   return (
     <>
-      <div className={style.skillLevelTitle}>{titleCard}</div>
+      <div className={style.positionCardTitle}>{titleCard}</div>
       <div className={style.positionInTop}>
-        <span className={style.position}>#{positionNumber}</span>
+        <span className={style.position}>{positionNumber}</span>
         <span className={style.country}>
           {location}
           {flag}

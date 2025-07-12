@@ -6,7 +6,10 @@ export const matchesApi = api.injectEndpoints({
     getPlayerMatchStats: build.query<Matches, { id: string; to: number }>({
       query: ({ id, to }) => ({
         url: `players/${id}/games/cs2/stats`,
-        ...(to && { params: { to } }),
+        params: {
+          limit: 30,
+          ...(to && { to }),
+        },
       }),
     }),
     getMatchInfo: build.query<void, string>({
