@@ -31,16 +31,15 @@ export const PlayerStats = () => {
       <h3 className={style.skillLevelSectionTitle}>Эло и уровень мастерства</h3>
 
       <div className={style.skillLevelSection}>
-        <SkillLevel
-          player={playerLvl}
-          id={id}
-        />
+        <SkillLevel player={playerLvl} id={id} />
       </div>
 
-      <div className={style.mapStatsSection}>
-        <h4 className={style.mapStatsTitle}>Статистика на картах</h4>
-        <MapStats stats={data} />
-      </div>
+      {data.segments.length > 0 && (
+        <div className={style.mapStatsSection}>
+          <h4 className={style.mapStatsTitle}>Статистика на картах</h4>
+          <MapStats stats={data} />
+        </div>
+      )}
     </div>
   );
 };

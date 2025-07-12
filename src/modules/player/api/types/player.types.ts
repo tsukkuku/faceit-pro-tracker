@@ -22,6 +22,7 @@ export interface Player {
 export interface Ban {
   ends_at: string;
   reason: string;
+  user_id: string;
 }
 
 export interface PlayerBan {

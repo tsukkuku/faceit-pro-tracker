@@ -48,7 +48,10 @@ export const PlayerBanner = () => {
           <p className={style.playerActivatedAt}>
             Пользователь с {formatDate(playerInfo.activated_at)}
           </p>
-          {ban && ban.items.map((ban) => <PlayerBanDetails ban={ban} />)}
+          {ban &&
+            ban.items.map((ban) => (
+              <PlayerBanDetails key={ban.user_id} ban={ban} />
+            ))}
         </div>
         <div className={style.subscribeButton}>
           <Button>Подписаться</Button>
