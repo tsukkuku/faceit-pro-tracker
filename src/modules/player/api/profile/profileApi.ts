@@ -2,6 +2,7 @@ import { api } from "@/shared/api";
 import type { PlayerStats } from "../types/stats.types";
 import type {
   Player,
+  PlayerBan,
   PlayerLastMatches,
   PlayerRanked,
   PlayerRankedPosition,
@@ -17,6 +18,11 @@ export const profileApi = api.injectEndpoints({
     getPlayerStats: build.query<PlayerStats, string>({
       query: (id) => ({
         url: `players/${id}/stats/cs2`,
+      }),
+    }),
+    getPlayerBans: build.query<PlayerBan, string>({
+      query: (id) => ({
+        url: `players/${id}/bans`,
       }),
     }),
     getPlayerRankedRegionPosition: build.query<
@@ -56,6 +62,7 @@ export const profileApi = api.injectEndpoints({
 export const {
   useGetPlayerInfoQuery,
   useGetPlayerStatsQuery,
+  useGetPlayerBansQuery,
   useGetPlayerRankedRegionPositionQuery,
   useGetPlayerRankedCountryPositionQuery,
   useGetLastMatchesInfoQuery,

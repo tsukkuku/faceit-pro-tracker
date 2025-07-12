@@ -19,6 +19,15 @@ export interface Player {
   verified: boolean;
 }
 
+export interface Ban {
+  ends_at: string;
+  reason: string;
+}
+
+export interface PlayerBan {
+  items: Ban[];
+}
+
 export interface PlayerRanked {
   nickname: string;
   player_id: string;
