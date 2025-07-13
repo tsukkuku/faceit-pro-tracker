@@ -1,3 +1,8 @@
+export interface MatchStatsProps {
+  id: string;
+  to: number;
+}
+
 export interface PlayerMatches {
   stats: PlayerMatchStats;
 }
@@ -21,4 +26,73 @@ export interface PlayerMatchStats {
 
 export interface Matches {
   items: PlayerMatches[];
+}
+
+export interface Lvl {
+  average: number;
+}
+
+export interface FactionInfo {
+  avatar: string;
+  leader: string;
+  name: string;
+  roster: RosterInfo[];
+  stats: {
+    rating: number;
+    skillLevel: Lvl;
+  };
+}
+
+export interface RosterInfo {
+  anticheat_required: boolean;
+  avatar: string;
+  nickname: string;
+  player_id: string;
+  game_skill_level: number;
+}
+
+export interface VotingLabels {
+  guid: string;
+  name: string;
+  class_name: string;
+  image_lg: string;
+  image_sm: string;
+}
+
+export interface MatchInfo {
+  best_of: number;
+  region: string;
+  finished_at: number;
+  status: string;
+  results: {
+    winner: string;
+  };
+  teams: {
+    faction1: FactionInfo;
+    faction2: FactionInfo;
+  };
+  voting: {
+    location: {
+      entities: VotingLabels[];
+      pick: string;
+    };
+    map: {
+      entities: VotingLabels[];
+      pick: string;
+    };
+  };
+}
+
+export interface MatchStats {
+  rounds: {
+    game_mode: string;
+    round_stats: {
+      Score: string;
+      Winner: string;
+      Region: string;
+    };
+    teams: {
+      team_id: string;
+    }[];
+  }[];
 }

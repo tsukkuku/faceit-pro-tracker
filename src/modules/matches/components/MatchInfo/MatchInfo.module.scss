@@ -1,0 +1,40 @@
+.matchInfoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.matchHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.teamsInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.matchRoster {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 50px;
+}
+
+.factionFirstRoster {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.factionSecondRoster {
+  @extend .factionFirstRoster;
+}

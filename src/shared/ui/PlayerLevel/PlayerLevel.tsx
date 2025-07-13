@@ -7,6 +7,7 @@ import { Image } from "../Image/Image";
 interface PlayerLevelProps {
   position: number;
   skill_level: number;
+  className?: string;
 }
 
 const icons: Record<number, string> = LEVEL_ICONS;
@@ -14,6 +15,7 @@ const icons: Record<number, string> = LEVEL_ICONS;
 export const PlayerLevel: FC<PlayerLevelProps> = ({
   position,
   skill_level,
+  className,
 }) => {
   if (position !== 0 && position <= 1000) {
     return (
@@ -21,7 +23,11 @@ export const PlayerLevel: FC<PlayerLevelProps> = ({
     );
   } else {
     return (
-      <Image src={icons[skill_level]} alt={`Level ${skill_level.toString()}`} />
+      <Image
+        src={icons[skill_level]}
+        alt={`Level ${skill_level.toString()}`}
+        className={className}
+      />
     );
   }
 };

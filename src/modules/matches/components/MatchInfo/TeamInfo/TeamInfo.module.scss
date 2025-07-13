@@ -1,0 +1,59 @@
+.firstFaction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.factionFirstScore {
+  width: 54px;
+  text-align: end;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.factionSecondScore {
+  @extend .factionFirstScore;
+  text-align: start;
+}
+
+.secondFaction {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+
+.factionFirstTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+
+  .factionName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .eloFirstFaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: gray;
+  }
+}
+
+.factionSecondTitle {
+  @extend .factionFirstTitle;
+  align-items: start;
+
+  .eloSecondFaction {
+    @extend .eloFirstFaction;
+    flex-direction: row-reverse;
+  }
+}
+
+.winner {
+  color: #32d35a;
+}

@@ -1,9 +1,14 @@
 import { api } from "@/shared/api";
-import type { Matches } from "../types/match.types";
+import type {
+  Matches,
+  MatchInfo,
+  MatchStats,
+  MatchStatsProps,
+} from "../types/match.types";
 
 export const matchesApi = api.injectEndpoints({
   endpoints: (build) => ({
-    getPlayerMatchStats: build.query<Matches, { id: string; to: number }>({
+    getPlayerMatchStats: build.query<Matches, MatchStatsProps>({
       query: ({ id, to }) => ({
         url: `players/${id}/games/cs2/stats`,
         params: {
@@ -12,12 +17,21 @@ export const matchesApi = api.injectEndpoints({
         },
       }),
     }),
-    getMatchInfo: build.query<void, string>({
+    getMatchInfo: build.query<MatchInfo, string>({
       query: (match_id) => ({
         url: `matches/${match_id}`,
+      }),
+    }),
+    getMatchStats: build.query<MatchStats, string>({
+      query: (match_id) => ({
+        url: `matches/${match_id}/stats`,
       }),
     }),
   }),
 });
 
-export const { useGetPlayerMatchStatsQuery, useGetMatchInfoQuery } = matchesApi;
+export const {
+  useGetPlayerMatchStatsQuery,
+  useGetMatchInfoQuery,
+  useGetMatchStatsQuery,
+} = matchesApi;

@@ -1,0 +1,78 @@
+.rosterCard {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--btn-border);
+  border-radius: 10px;
+  padding: 15px;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background: var(--card-background);
+  }
+}
+
+.playerNickname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  .nicknameContainer {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    .faceitNickname {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .nickname {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .steamNickname {
+      width: 116px;
+      font-size: 12px;
+      font-weight: 700;
+      color: gray;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+.playerTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+
+  .rankImage {
+    width: 40px;
+    margin-left: 75px;
+  }
+}
+
+.playerElo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+
+  .eloValue {
+    color: gray;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

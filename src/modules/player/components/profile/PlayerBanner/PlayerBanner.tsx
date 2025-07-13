@@ -3,7 +3,8 @@ import {
   useGetPlayerInfoQuery,
 } from "@/modules/player/api";
 import { useParams } from "react-router-dom";
-import { NO_AVATAR, NO_BACKGROUND } from "@/modules/player/constants";
+import { NO_BACKGROUND } from "@/modules/player/constants";
+import { NO_AVATAR } from "@/shared/constants";
 import { VerifySVG } from "@/shared/assets";
 import { formatDate } from "@/shared/helpers";
 import ReactCountryFlag from "react-country-flag";

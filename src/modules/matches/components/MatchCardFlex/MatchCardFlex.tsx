@@ -3,6 +3,7 @@ import type { PlayerMatches } from "@/modules/matches/api";
 import { formatDate } from "@/shared/helpers";
 import { MAP_IMAGES } from "@/modules/matches/constants";
 import { Image } from "@/shared/ui";
+import { Link } from "react-router-dom";
 import style from "./MatchCardFlex.module.scss";
 
 interface MatchCardFlexProps {
@@ -19,7 +20,11 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
   };
   return (
     <>
-      <div className={style.matchCardFlex}>
+      <Link
+        className={style.matchCardFlex}
+        to={`/match/${match.stats["Match Id"]}`}
+        target="_blank"
+      >
         <div className={style.matchCardFlexContent}>
           <div className={style.statsColumn}>
             <div className={style.cardFlexValue} style={{ width: "180px" }}>
@@ -71,7 +76,7 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
