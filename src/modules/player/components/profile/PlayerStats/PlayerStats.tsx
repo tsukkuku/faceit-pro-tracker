@@ -27,9 +27,10 @@ export const PlayerStats = () => {
           <StatsCard key={stat} value={data.lifetime[stat]} wrapper={stat} />
         ))}
       </div>
-      <LastMatchesStats id={id} />
-      <h3 className={style.skillLevelSectionTitle}>Эло и уровень мастерства</h3>
 
+      <LastMatchesStats id={id} />
+
+      <h3 className={style.skillLevelSectionTitle}>Эло и уровень мастерства</h3>
       <div className={style.skillLevelSection}>
         <SkillLevel player={playerLvl} id={id} />
       </div>
