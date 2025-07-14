@@ -33,6 +33,7 @@ export const PlayerBanner = () => {
           src={playerInfo.avatar}
           fallback={NO_AVATAR}
           alt="Player avatar"
+          size="lg"
         />
         <div className={style.playerTitle}>
           <div className={style.playerNickname}>

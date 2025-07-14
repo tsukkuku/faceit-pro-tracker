@@ -83,6 +83,40 @@ export interface MatchInfo {
   };
 }
 
+export interface PlayerInMatchStats {
+  Kills: string;
+  Assists: string;
+  Deaths: string;
+  "K/D Ratio": string;
+  "K/R Ratio": string;
+  Headshots: string;
+  "Headshots %": string;
+  MVPs: string;
+  "Triple Kills": string;
+  "Quadro Kills": string;
+  "Penta Kills": string;
+  ADR: string;
+}
+
+export interface PlayerInMatchInfo {
+  nickname: string;
+  player_id: string;
+  player_stats: PlayerInMatchStats;
+}
+
+export interface TeamInfo {
+  team_id: string;
+  players: PlayerInMatchInfo[];
+  team_stats: {
+    "Final Score": string;
+    "First Half Score": string;
+    "Second Half Score": string;
+    "Overtime score": string;
+    Team: string;
+    "Team Win": string;
+  };
+}
+
 export interface MatchStats {
   rounds: {
     game_mode: string;
@@ -91,8 +125,6 @@ export interface MatchStats {
       Winner: string;
       Region: string;
     };
-    teams: {
-      team_id: string;
-    }[];
+    teams: TeamInfo[];
   }[];
 }

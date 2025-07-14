@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-tr:nth-child(2n) {
+.mapRow:nth-child(2n) {
   background-color: var(--table-bg);
   transition: 0.3s;
 
@@ -17,12 +17,11 @@ tr:nth-child(2n) {
   }
 }
 
-th,
-td {
+.mapCell {
   padding: 10px;
 }
 
-th {
+.mapHeadNames {
   text-align: start;
   color: gray;
   transition: 0.3s;
@@ -32,7 +31,7 @@ th {
   }
 }
 
-td {
+.mapStatsInfo {
   text-transform: uppercase;
   text-align: start;
 }

@@ -34,19 +34,29 @@ export const MapStats: FC<MapStatsProps> = ({ stats }) => {
       {visible && (
         <table className={style.mapStatsTable}>
           <thead>
-            <tr>
-              <th>Map</th>
+            <tr className={style.mapRow}>
+              <th className={`${style.mapHeadNames} ${style.mapCell}`}>Map</th>
               {KEYS.map((key) => (
-                <th key={key}>{key}</th>
+                <th
+                  key={key}
+                  className={`${style.mapHeadNames} ${style.mapCell}`}
+                >
+                  {key}
+                </th>
               ))}
             </tr>
           </thead>
           <tbody>
             {sortedArray.map((item) => (
-              <tr key={item.label}>
-                <td>{item.label}</td>
+              <tr key={item.label} className={style.mapRow}>
+                <td className={style.mapCell}>{item.label}</td>
                 {KEYS.map((key) => (
-                  <td key={key}>{item.stats[key]}</td>
+                  <td
+                    key={key}
+                    className={`${style.mapStatsInfo} ${style.mapCell}`}
+                  >
+                    {item.stats[key]}
+                  </td>
                 ))}
               </tr>
             ))}

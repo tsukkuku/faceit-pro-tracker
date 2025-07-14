@@ -25,7 +25,7 @@ export const TeamInfo: FC<TeamInfo> = ({ faction, isFirst, stats }) => {
         </h6>
       </div>
       <Avatar
-        size="sm"
+        size="md"
         src={
           isFirst
             ? faction?.teams.faction1.avatar

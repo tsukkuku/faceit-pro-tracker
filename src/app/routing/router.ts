@@ -4,6 +4,7 @@ import { Layout } from "../layout";
 import { HomePage } from "@/pages/home/HomePage";
 import { PlayerPage } from "@/pages/player-page/PlayerPage";
 import { MatchPage } from "@/pages/MatchPage/MatchPage";
+import { MatchStats } from "@/pages/MatchStats/MatchStats";
 
 export const route = createBrowserRouter([
   {
@@ -19,8 +20,12 @@ export const route = createBrowserRouter([
         Component: PlayerPage,
       },
       {
-        path: ROUTES.MATCH,
+        path: ROUTES.MATCH_INFO,
         Component: MatchPage,
+      },
+      {
+        path: ROUTES.MATCH_STATS,
+        Component: MatchStats,
       },
     ],
   },

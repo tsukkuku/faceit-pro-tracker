@@ -19,7 +19,7 @@ export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
       className={style.playerCard}
       onClick={() => navigate(`/player/${data?.player_id}`)}
     >
-      <Avatar src={data?.avatar} fallback={NO_AVATAR} />
+      <Avatar src={data?.avatar} fallback={NO_AVATAR} size="lg" />
       <p className={style.nickname}>
         {data?.nickname}
         {data?.verified && <VerifySVG width={18} height={18} />}

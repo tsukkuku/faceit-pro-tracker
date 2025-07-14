@@ -19,7 +19,7 @@ export const PickInformation: FC<PickInformationProps> = ({ info }) => {
   );
 
   const handleHomeClick = () => {
-    navigate("/");
+    navigate("stats");
   };
 
   return (
@@ -34,7 +34,7 @@ export const PickInformation: FC<PickInformationProps> = ({ info }) => {
         <Image src={selectMap?.image_sm} alt={info.voting.map.pick} />
         <div className={style.pickTitle}>{selectMap?.name}</div>
       </div>
-      <Button onClick={handleHomeClick}>На главную</Button>
+      <Button onClick={handleHomeClick}>К статистике</Button>
     </div>
   );
 };

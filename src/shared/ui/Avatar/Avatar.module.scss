@@ -1,5 +1,4 @@
 .avatar {
-  border: 1px solid var(--btn-border);
   border-radius: 50%;
 
   .avatarPhoto {
@@ -11,16 +10,16 @@
 }
 
 .sm {
+  width: 35px;
+  height: 35px;
+}
+
+.md {
   width: 55px;
   height: 55px;
 }
 
-.md {
-  width: 120px;
-  height: 120px;
-}
-
 .lg {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
 }

@@ -1,0 +1,43 @@
+.scoreBoard {
+  width: 100%;
+  color: var(--text-color);
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+.scoreBoardHeader {
+  background-color: var(--table-bg);
+}
+
+.scoreBoardRow {
+  border-block-end: 1px solid rgb(36, 36, 36);
+
+  .scoreBoardPlayer {
+    padding: 8px 15px;
+    text-align: start;
+    min-width: 176px;
+  }
+}
+
+.scoreBoardTitles {
+  text-align: start;
+  padding: 8px 10px;
+}
+
+.playerRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  font-weight: 700;
+  text-transform: unset;
+}
+
+.playerRowStats {
+  font-weight: 700;
+  padding: 8px 10px;
+}
+
+.playerInformation {
+  width: 250px;
+}

@@ -36,7 +36,7 @@ export const RosterCard: FC<RosterCardProps> = ({ roster }) => {
     >
       <div className={style.avatarContainer}>
         <Avatar
-          size="sm"
+          size="md"
           src={player?.avatar}
           alt="Player avatar"
           fallback={NO_AVATAR}

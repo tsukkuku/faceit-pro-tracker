@@ -1,3 +1,5 @@
+import type { PlayerInMatchStats } from "../api";
+
 export const MAP_IMAGES: Record<string, string> = {
   de_dust2:
     "https://assets.faceit-cdn.net/third_party/games/ce652bd4-0abb-4c90-9936-1133965ca38b/assets/votables/adf58ac6-b0f3-40e9-87ef-0af23fc60918_1695819116078.jpeg",
@@ -28,3 +30,18 @@ export const MATCH_HEADERS = [
   "HS%",
   "Map",
 ] as const;
+
+export const MATCH_STATS_HEADER: Array<keyof PlayerInMatchStats> = [
+  "Kills",
+  "Assists",
+  "Deaths",
+  "K/D Ratio",
+  "K/R Ratio",
+  "Headshots",
+  "Headshots %",
+  "MVPs",
+  "Triple Kills",
+  "Quadro Kills",
+  "Penta Kills",
+  "ADR",
+];
