@@ -9,6 +9,7 @@ import type { FC } from "react";
 import ReactCountryFlag from "react-country-flag";
 import { Elo, VerifySVG } from "@/shared/assets";
 import { NO_AVATAR } from "@/shared/constants";
+import { RosterSkeleton } from "./RosterSkeleton";
 import style from "./RosterCard.module.scss";
 
 interface RosterCardProps {
@@ -17,13 +18,17 @@ interface RosterCardProps {
 
 export const RosterCard: FC<RosterCardProps> = ({ roster }) => {
   const navigate = useNavigate();
-  const { data: player } = useGetPlayerInMatchInfoQuery(roster.player_id);
-  const { data: position } = useGetPlayerPositionQuery({
-    id: player?.player_id || "",
-    region: player?.games.cs2.region || "",
-  });
+  const { data: player, isLoading } = useGetPlayerInMatchInfoQuery(
+    roster.player_id
+  );
+  const { data: position, isLoading: isLoadingPosition } =
+    useGetPlayerPositionQuery({
+      id: player?.player_id || "",
+      region: player?.games.cs2.region || "",
+    });
 
-  if (!position && !player?.games.cs2.skill_level) return;
+  if (isLoading || isLoadingPosition) return <RosterSkeleton />;
+  if (!player?.games.cs2.skill_level) return;
   return (
     <div
       className={style.rosterCard}

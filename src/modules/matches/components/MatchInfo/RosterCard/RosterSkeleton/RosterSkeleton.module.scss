@@ -1,0 +1,71 @@
+.rosterSkeleton {
+  width: 450px;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  background: #a2a2a274;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  animation: load 1.5s infinite ease-in-out;
+}
+
+.rosterSkeletonAvatar {
+  background: gray;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.nickname {
+  background: gray;
+  width: 120px;
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+.steamNickname {
+  background: gray;
+  width: 50px;
+  height: 10px;
+}
+
+.playerLevel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+  height: 10px;
+  margin-left: auto;
+
+  .playerElo {
+    width: 48px;
+    height: 10px;
+    background: gray;
+    margin-left: auto;
+  }
+
+  .playerRank {
+    width: 40px;
+    height: 40px;
+    background: gray;
+    padding: 5px 20px;
+    border-radius: 50%;
+    margin-left: 70px;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
