@@ -1,15 +1,25 @@
 .rosterSkeleton {
-  width: 450px;
+  width: 480px;
   height: auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
   background: var(--skeleton-bg);
-  padding: 10px;
+  padding: 15px;
   border: 1px solid gray;
   border-radius: 10px;
   animation: load 1.5s infinite ease-in-out;
+}
+
+.rosterSkeletonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rosterSkeletonPlayerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .rosterSkeletonAvatar {
@@ -37,24 +47,18 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 150px;
-  height: 10px;
-  margin-left: auto;
 
   .playerElo {
-    width: 48px;
+    width: 70px;
     height: 10px;
     background: gray;
-    margin-left: auto;
   }
 
   .playerRank {
     width: 40px;
     height: 40px;
     background: gray;
-    padding: 5px 20px;
     border-radius: 50%;
-    margin-left: 70px;
   }
 }
 
