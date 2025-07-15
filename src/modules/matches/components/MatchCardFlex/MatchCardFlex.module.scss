@@ -1,6 +1,6 @@
 .matchCardFlex {
   color: var(--text-color);
-  padding: 8px;
+  padding-inline: 10px;
   border-radius: 10px;
   border: 1px solid var(--btn-border);
   transition: 0.3s;
@@ -30,7 +30,7 @@
 
 .cardFlexValue {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 24px;
 }

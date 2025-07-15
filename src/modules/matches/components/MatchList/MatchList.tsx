@@ -18,7 +18,7 @@ export const MatchList = () => {
 
   const { match, ref, hasMore } = usePagination(matches!);
 
-  if (isLoading || !match.length) return;
+  if (!match.length) return;
 
   return (
     <>

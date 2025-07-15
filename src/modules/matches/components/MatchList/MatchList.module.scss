@@ -22,7 +22,6 @@
 
 .cardFlexTitle {
   width: 100%;
-  padding: 8px 0;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -31,6 +30,6 @@
 
 .cardFlexFirstTitle {
   @extend .cardFlexTitle;
-  width: 250px;
+  width: 260px;
   text-align: center;
 }
