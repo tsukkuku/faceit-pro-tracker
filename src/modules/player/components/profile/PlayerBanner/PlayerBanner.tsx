@@ -8,18 +8,17 @@ import { NO_AVATAR } from "@/shared/constants";
 import { VerifySVG } from "@/shared/assets";
 import { formatDate } from "@/shared/helpers";
 import ReactCountryFlag from "react-country-flag";
-import { ScaleLoader } from "react-spinners";
 import { Avatar, Button, Image } from "@/shared/ui";
 import { PlayerBanDetails } from "./PlayerBanDetails";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
   const { id = "" } = useParams();
-  const { data: playerInfo, isLoading } = useGetPlayerInfoQuery(id);
+  const { data: playerInfo, isError } = useGetPlayerInfoQuery(id);
   const { data: ban } = useGetPlayerBansQuery(id);
 
-  if (isLoading) return <ScaleLoader color="var(--text-color)" />;
-  if (!playerInfo) return <p>Игрок не найден...</p>;
+  if (isError) return <p>Игрок не найден...</p>;
+  if (!playerInfo) return;
   return (
     <div className={style.playerBanner}>
       <Image
