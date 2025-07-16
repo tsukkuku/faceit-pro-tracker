@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { PlayerMap } from "@/modules/player/api";
 import style from "./MostPlayedMap.module.scss";
+import { Image } from "@/shared/ui";
 
 interface MostPlayedMapsProps {
   maps: PlayerMap;
@@ -9,7 +10,11 @@ interface MostPlayedMapsProps {
 export const MostPlayedMap: FC<MostPlayedMapsProps> = ({ maps }) => {
   return (
     <div className={style.mapContainer}>
-      <img src={maps.img_regular} alt={maps.label} className={style.mapImage} />
+      <Image
+        src={maps.img_regular}
+        alt={maps.label}
+        className={style.mapImage}
+      />
       <div className={style.mapStatsInfo}>
         <div className={style.mapStatsDetail}>
           <span>Win Rate %</span>
