@@ -14,7 +14,7 @@ export const MAP_IMAGES: Record<string, string> = {
   de_nuke:
     "https://distribution.faceit-cdn.net/images/faa7775b-f42b-4627-891a-21ee7cc13637.jpeg",
   de_train:
-    "https://distribution.faceit-cdn.net/images/faa7775b-f42b-4627-891a-21ee7cc13637.jpeg",
+    "https://distribution.faceit-cdn.net/images/9e2d5b60-e16e-4309-8e77-8d4427938095.jpeg", 
   de_vertigo:
     "https://distribution.faceit-cdn.net/images/a8d0572f-8a89-474a-babc-c2009cdc42f7.jpeg",
   de_overpass:
