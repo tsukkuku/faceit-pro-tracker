@@ -16,6 +16,8 @@
   --map-label-bg: rgb(27, 27, 27);
   --pick-container-bg: #1d1d1d;
   --skeleton-bg: #11111174;
+  --active-color: black;
+  --no-active-color: #fff;
 }
 
 [data-theme="light"] {
@@ -36,6 +38,8 @@
   --map-label-bg: rgb(226, 226, 226);
   --pick-container-bg: #eeeded;
   --skeleton-bg: #a2a2a274;
+  --active-color: #fff;
+  --no-active-color: black;
 }
 
 #root,

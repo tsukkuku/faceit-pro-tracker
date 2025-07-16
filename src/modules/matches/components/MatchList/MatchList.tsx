@@ -1,20 +1,18 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGetPlayerMatchStatsQuery } from "@/modules/matches/api";
-import { MATCH_HEADERS } from "@/modules/matches/constants";
-import { MatchCardFlex } from "../MatchCardFlex";
-import { ClipLoader } from "react-spinners";
 import { useAppSelector } from "@/shared/hooks";
 import { usePagination } from "@/modules/matches/hooks";
+import { SwitchButton } from "./SwitchButton";
+import { FlexVariant } from "./FlexVariant";
+import { GridVariant } from "./GridVariant";
 import style from "./MatchList.module.scss";
 
 export const MatchList = () => {
   const { id = "" } = useParams();
   const { to } = useAppSelector((state) => state.to);
-  const {
-    data: matches,
-    isLoading,
-    isFetching,
-  } = useGetPlayerMatchStatsQuery({ id, to });
+  const { data: matches, isFetching } = useGetPlayerMatchStatsQuery({ id, to });
+  const [isFlex, setIsFlex] = useState<boolean>(true);
 
   const { match, ref, hasMore } = usePagination(matches!);
 
@@ -22,36 +20,24 @@ export const MatchList = () => {
 
   return (
     <>
-      {!isLoading && (
-        <div className={style.matchesSection}>
-          <h5 className={style.sectionTitle}>История матчей</h5>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span className={style.cardFlexFirstTitle}>Дата</span>
-            <div className={style.matchCardFlexTitles}>
-              {MATCH_HEADERS.map((header) => (
-                <span key={header} className={style.cardFlexTitle}>
-                  {header}
-                </span>
-              ))}
-            </div>
-          </div>
-          {match.map((match) => (
-            <MatchCardFlex key={match.stats["Match Id"]} match={match} />
-          ))}
-          <div
-            ref={ref}
-            style={{ width: "100%", height: "20px", textAlign: "center" }}
-          >
-            {isFetching && <ClipLoader color="var(--text-color)" />}
-            {!hasMore && <p>У игрока больше нету матчей в Counter Strike 2</p>}
-          </div>
-        </div>
+      <div className={style.playerMatchesSection}>
+        <h5 className={style.sectionTitle}>История матчей</h5>
+        <SwitchButton isFlex={isFlex} setIsFlex={setIsFlex} />
+      </div>
+      {isFlex ? (
+        <FlexVariant
+          match={match}
+          ref={ref}
+          isFetching={isFetching}
+          hasMore={hasMore}
+        />
+      ) : (
+        <GridVariant
+          match={match}
+          ref={ref}
+          isFetching={isFetching}
+          hasMore={hasMore}
+        />
       )}
     </>
   );

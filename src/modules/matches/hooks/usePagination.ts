@@ -7,7 +7,7 @@ import { resetTo, setTo } from "../slices";
 export const usePagination = (data: Matches) => {
   const dispatch = useAppDispatch();
   const [match, setMatch] = useState<PlayerMatches[]>([]);
-  const [hasMore, setHasMore] = useState<boolean>();
+  const [hasMore, setHasMore] = useState<boolean>(true);
   const { ref, inView } = useInView({
     threshold: 0.5,
   });

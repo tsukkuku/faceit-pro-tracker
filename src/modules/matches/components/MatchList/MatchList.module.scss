@@ -1,35 +1,12 @@
-.matchesSection {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+.playerMatchesSection {
   width: 100%;
   max-width: 1440px;
-  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sectionTitle {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.matchCardFlexTitles {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cardFlexTitle {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  color: gray;
-}
-
-.cardFlexFirstTitle {
-  @extend .cardFlexTitle;
-  width: 260px;
-  text-align: center;
 }

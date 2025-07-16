@@ -1,5 +1,4 @@
 .matchCardFlex {
-  color: var(--text-color);
   padding-inline: 10px;
   border-radius: 10px;
   border: 1px solid var(--btn-border);
@@ -9,6 +8,14 @@
     color: #fff;
     cursor: pointer;
     background: var(--card-background);
+  }
+}
+
+.link {
+  color: var(--text-color);
+
+  &:hover {
+    color: #fff;
   }
 }
 

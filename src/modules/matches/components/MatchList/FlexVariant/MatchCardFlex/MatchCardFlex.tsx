@@ -19,12 +19,8 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
     }
   };
   return (
-    <>
-      <Link
-        className={style.matchCardFlex}
-        to={`/match/${match.stats["Match Id"]}`}
-        target="_blank"
-      >
+    <div className={style.matchCardFlex}>
+      <Link to={`/match/${match.stats["Match Id"]}`} target="_blank" className={style.link}>
         <div className={style.matchCardFlexContent}>
           <div className={style.statsColumn}>
             <div className={style.cardFlexValue} style={{ width: "180px" }}>
@@ -57,12 +53,7 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
           </div>
           <div className={style.statsColumn}>
             <div className={style.cardFlexValue}>
-              {parseFloat(match.stats.ADR).toFixed(2)}
-            </div>
-          </div>
-          <div className={style.statsColumn}>
-            <div className={style.cardFlexValue}>
-              {match.stats["Headshots %"]}
+              {match.stats.ADR ? parseFloat(match.stats.ADR).toFixed(2) : "N/A"}
             </div>
           </div>
           <div className={style.statsColumn}>
@@ -77,6 +68,6 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
           </div>
         </div>
       </Link>
-    </>
+    </div>
   );
 };

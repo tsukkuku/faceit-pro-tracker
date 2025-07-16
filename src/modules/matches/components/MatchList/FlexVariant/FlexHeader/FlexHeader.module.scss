@@ -1,0 +1,26 @@
+.flexHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matchCardFlexTitles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardFlexTitle {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: gray;
+}
+
+.cardFlexFirstTitle {
+  @extend .cardFlexTitle;
+  width: 260px;
+  text-align: center;
+}

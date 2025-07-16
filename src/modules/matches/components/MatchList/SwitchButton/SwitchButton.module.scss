@@ -1,0 +1,27 @@
+.switchVariant {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--btn-border);
+  border-radius: 8px;
+  padding: 6px;
+
+  .active {
+    background: var(--btn-primary);
+    svg path {
+      color: var(--active-color);
+    }
+  }
+
+  .noActive {
+    background: transparent;
+    border: 1px solid var(--btn-border);
+    svg path {
+      color: var(--no-active-color);
+    }
+  }
+
+  button {
+    padding: 10px;
+  }
+}

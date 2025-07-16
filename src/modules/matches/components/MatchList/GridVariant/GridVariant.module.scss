@@ -1,0 +1,10 @@
+.matchGridSection {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+}
