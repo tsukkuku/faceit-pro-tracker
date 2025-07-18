@@ -4,7 +4,9 @@ import { renderHook } from "@testing-library/react";
 import { useSavePlayers } from "./useSavePlayers";
 import { randomPlayers } from "@/modules/player/helpers";
 
-const mockRandomPlayers = vi.fn(randomPlayers);
+vi.mock("@/modules/player/helpers", () => ({
+  randomPlayers: vi.fn().mockImplementation((items) => items),
+}));
 
 const mockReturnValue: PlayerRanked[] = [
   {
@@ -27,13 +29,13 @@ describe("useSavePlayers hook tests", () => {
     const { result } = renderHook(() => useSavePlayers(undefined));
 
     expect(result.current).toEqual([]);
-    expect(mockRandomPlayers).not.toBeCalled();
+    expect(randomPlayers).not.toBeCalled();
     expect(localStorage.getItem("savedPlayers")).toBeNull();
   });
   test("dont saved players variant", () => {
     const { result } = renderHook(() => useSavePlayers(mockData));
-    mockRandomPlayers(mockData.items);
-    expect(mockRandomPlayers).toBeCalled();
+    expect(randomPlayers).toBeCalledWith(mockData.items);
+    expect(randomPlayers).toBeCalledTimes(1);
     expect(result.current).toEqual(mockReturnValue);
   });
   test("save players", () => {
@@ -42,7 +44,7 @@ describe("useSavePlayers hook tests", () => {
 
     const savedPlayers = localStorage.getItem("savedPlayers");
 
-    expect(mockRandomPlayers).not.toHaveBeenCalled();
+    expect(randomPlayers).not.toHaveBeenCalled();
     expect(result.current).toEqual(JSON.parse(savedPlayers!));
   });
 });
