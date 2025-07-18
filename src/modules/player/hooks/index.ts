@@ -1,3 +1,3 @@
-export { useGetLastMatchesStats } from "./useGetLastMatchesStats";
+export { useGetLastMatchesStats } from "./useGetLastMatchesStats/useGetLastMatchesStats";
 
-export { useSavePlayers } from "./useSavePlayers";
+export { useSavePlayers } from "./useSavePlayers/useSavePlayers";

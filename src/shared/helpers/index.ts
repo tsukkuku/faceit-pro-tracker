@@ -1,3 +1,3 @@
-export { formatDate } from "./formatDate";
+export { formatDate } from "./formatDate/formatDate";
 
-export { getVariant } from "./getVariant";
+export { getVariant } from "./getVariant/getVariant";

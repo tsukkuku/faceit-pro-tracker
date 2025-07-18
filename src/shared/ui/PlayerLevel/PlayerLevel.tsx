@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { PlayerPlace } from "../PlayerPlace/PlayerPlace";
-import { getVariant } from "@/shared/helpers/getVariant";
-import { LEVEL_ICONS } from "@/modules/player/constants";
+import { getVariant } from "@/shared/helpers/getVariant/getVariant";
+import { LEVEL_ICONS } from "@/shared/constants";
 import { Image } from "../Image/Image";
 
 interface PlayerLevelProps {

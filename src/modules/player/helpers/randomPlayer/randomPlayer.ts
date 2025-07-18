@@ -1,4 +1,4 @@
-import type { PlayerRanked } from "../api/types/player.types";
+import type { PlayerRanked } from "@/modules/player/api";
 
 export const randomPlayers = (
   arr: PlayerRanked[],

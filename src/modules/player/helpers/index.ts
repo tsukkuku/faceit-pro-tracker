@@ -1,2 +1,1 @@
-export { convertDate } from "./convertDate";
-export { randomPlayers } from "./randomPlayer";
+export { randomPlayers } from "./randomPlayer/randomPlayer";

@@ -1,3 +1,3 @@
-export { useTeamInfo } from "./useTeamInfo";
+export { useTeamInfo } from "./useTeamInfo/useTeamInfo";
 
-export { usePagination } from "./usePagination";
+export { usePagination } from "./usePagination/usePagination";

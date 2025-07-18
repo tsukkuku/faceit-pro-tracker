@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import type { Matches, PlayerMatches } from "../api";
+import type { Matches, PlayerMatches } from "../../api";
 import { useInView } from "react-intersection-observer";
 import { useAppDispatch } from "@/shared/hooks";
-import { resetTo, setTo } from "../slices";
+import { resetTo, setTo } from "../../slices";
 
 export const usePagination = (data: Matches) => {
   const dispatch = useAppDispatch();

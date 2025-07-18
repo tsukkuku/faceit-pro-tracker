@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { randomPlayers } from "../helpers/randomPlayer";
-import type { ApiResponse, PlayerRanked } from "../api/types/player.types";
+import { randomPlayers } from "@/modules/player/helpers";
+import type { ApiResponse, PlayerRanked } from "@/modules/player/api";
 
-export const useSavePlayers = (data: ApiResponse) => {
+export const useSavePlayers = (data: ApiResponse | undefined) => {
   const [players, setPlayers] = useState<PlayerRanked[]>([]);
 
   useEffect(() => {

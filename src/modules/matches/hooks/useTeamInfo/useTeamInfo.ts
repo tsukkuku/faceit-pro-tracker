@@ -1,4 +1,4 @@
-import type { MatchStats } from "../api";
+import type { MatchStats } from "../../api";
 
 export const useTeamInfo = (stats: MatchStats) => {
   const faction1 = stats?.rounds[0].teams[0];
