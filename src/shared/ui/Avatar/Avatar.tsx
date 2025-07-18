@@ -13,13 +13,18 @@ export const Avatar: FC<AvatarProps> = ({
   fallback,
   size = "md",
   className,
+  ...props
 }) => {
   return (
-    <div className={clsx(style[size], style.avatar)}>
+    <div
+      className={clsx(style[size], style.avatar)}
+      data-testid="avatar-container"
+    >
       <Image
         src={src}
         fallback={fallback}
         className={clsx(style.avatarPhoto, className)}
+        {...props}
       />
     </div>
   );

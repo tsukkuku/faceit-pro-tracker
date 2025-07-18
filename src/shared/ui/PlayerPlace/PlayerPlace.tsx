@@ -19,7 +19,12 @@ export const PlayerPlace: FC<PlayerPlaceProps> = ({
     <>
       <Button variant="player-place" className={clsx(style[variant])}>
         {children}
-        <RankSVG width={26} height={30} className={style.rankIcon} />
+        <RankSVG
+          width={26}
+          height={30}
+          title="rank-icon"
+          className={style.rankIcon}
+        />
       </Button>
     </>
   );
