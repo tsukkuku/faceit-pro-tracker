@@ -9,33 +9,40 @@ export const SearchForm = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState<string>("");
   const [trigger] = useLazyGetPlayerIDQuery();
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
+    if (error) setError(null);
   };
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!value) return console.log("Поле не должно быть пустым");
+    if (!value) {
+      setError("Поле ввода не должно быть пустым");
+      return;
+    }
     try {
       const result = await trigger(value.trim()).unwrap();
       navigate(`/player/${result.player_id}`);
     } catch (error: any) {
-      console.log(error.message);
+      setError("Игрок не найден");
     }
   };
   return (
-    <>
+    <div className={style.searchForm}>
       <form onSubmit={onSubmit} className={style.form}>
         <Input
-          placeholder="Введите ник игрока"
+          placeholder="Введите точный ник игрока"
           value={value}
           onChange={handleChange}
+          className={error ? style.error : style.input}
         />
         <Button variant="search-primary">
           <FaSearch />
         </Button>
       </form>
-    </>
+      <span className={style.errorMessage}>{error && error}</span>
+    </div>
   );
 };
