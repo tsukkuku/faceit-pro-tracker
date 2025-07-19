@@ -10,12 +10,16 @@ import { formatDate } from "@/shared/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { Avatar, Button, Image } from "@/shared/ui";
 import { PlayerBanDetails } from "./PlayerBanDetails";
+import { useDocumentTitle } from "@/shared/hooks";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
   const { id = "" } = useParams();
   const { data: playerInfo, isError } = useGetPlayerInfoQuery(id);
   const { data: ban } = useGetPlayerBansQuery(id);
+  useDocumentTitle(
+    playerInfo ? `Статистика игрока ${playerInfo.nickname}` : "Загрузка..."
+  );
 
   if (isError) return <p>Игрок не найден...</p>;
   if (!playerInfo) return;

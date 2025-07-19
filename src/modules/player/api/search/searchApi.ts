@@ -15,7 +15,7 @@ export const searchApi = api.injectEndpoints({
       query: () => ({
         url: `rankings/games/cs2/regions/EU`,
         params: {
-          limit: 30,
+          limit: 100,
         },
       }),
     }),

@@ -1,2 +1,3 @@
-export { useAppDispatch, useAppSelector } from "./redux";
+export { useDocumentTitle } from "./useDocumentTitle/useDocumentTitle";
 
+export { useAppDispatch, useAppSelector } from "./redux/redux";

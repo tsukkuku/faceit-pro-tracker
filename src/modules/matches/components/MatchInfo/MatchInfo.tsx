@@ -8,12 +8,14 @@ import { TeamInfo } from "./TeamInfo";
 import { MatchStatus } from "./MatchStatus";
 import { RosterCard } from "./RosterCard";
 import { PickInformation } from "./PickInformation";
+import { useDocumentTitle } from "@/shared/hooks";
 import style from "./MatchInfo.module.scss";
 
 export const MatchInfo = () => {
   const { id = "" } = useParams();
   const { data: info, isLoading } = useGetMatchInfoQuery(id);
   const { data: stats, isLoading: isLoadingStats } = useGetMatchStatsQuery(id);
+  useDocumentTitle("Комната матча");
 
   if (isLoading && isLoadingStats)
     return <ScaleLoader color="var(--text-color)" />;

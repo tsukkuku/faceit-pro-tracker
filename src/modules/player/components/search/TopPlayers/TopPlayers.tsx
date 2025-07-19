@@ -2,11 +2,13 @@ import { useGetPlayerRankedQuery } from "@/modules/player/api";
 import { useSavePlayers } from "@/modules/player/hooks";
 import { ScaleLoader } from "react-spinners";
 import { PlayerCard } from "../PlayerCard/PlayerCard";
+import { useDocumentTitle } from "@/shared/hooks";
 import style from "./TopPlayers.module.scss";
 
 export const TopPlayers = () => {
   const { data } = useGetPlayerRankedQuery();
   const players = useSavePlayers(data!);
+  useDocumentTitle("Главная");
 
   if (!data) return <ScaleLoader color="var(--text-color)" />;
   return (

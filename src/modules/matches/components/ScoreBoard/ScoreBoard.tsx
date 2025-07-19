@@ -9,12 +9,14 @@ import { ScaleLoader } from "react-spinners";
 import { ScoreBoardInfo } from "./ScoreBoardInfo";
 import { ScoreBoardTable } from "./ScoreBoardTable/ScoreBoardTable";
 import style from "./ScoreBoard.module.scss";
+import { useDocumentTitle } from "@/shared/hooks";
 
 export const ScoreBoard = () => {
   const navigate = useNavigate();
   const { id = "" } = useParams();
   const { data: teamInfo, isLoading: infoLoading } = useGetMatchInfoQuery(id);
   const { data: stats, isLoading } = useGetMatchStatsQuery(id);
+  useDocumentTitle("Статистика матча");
 
   if (isLoading || infoLoading || !stats || !teamInfo)
     return <ScaleLoader color="var(--text-color)" />;
