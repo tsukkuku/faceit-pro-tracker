@@ -12,7 +12,7 @@
 }
 
 .matchStatusInfo {
-  width: 135px;
+  width: 185px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,12 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
+  }
+
+  .lobbyName {
+    @extend .matchStatus;
+    text-align: center;
+    width: 180px;
   }
 
   .matchBestOfInfo {

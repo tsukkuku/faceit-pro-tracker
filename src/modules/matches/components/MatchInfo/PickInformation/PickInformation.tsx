@@ -11,10 +11,11 @@ interface PickInformationProps {
 export const PickInformation: FC<PickInformationProps> = ({ info }) => {
   const navigate = useNavigate();
 
-  const selectLocation = info.voting.location.entities.find(
+  const selectLocation = info?.voting?.location?.entities?.find(
     (item) => item.guid === info.voting.location.pick[0]
   );
-  const selectMap = info.voting.map.entities.find(
+
+  const selectMap = info?.voting?.map?.entities?.find(
     (item) => item.guid === info.voting.map.pick[0]
   );
 
@@ -24,11 +25,18 @@ export const PickInformation: FC<PickInformationProps> = ({ info }) => {
 
   return (
     <div className={style.pickContainer}>
-      <span className={style.pickText}>Сервер</span>
-      <div className={style.pickInformation}>
-        <Image src={selectLocation?.image_sm} alt={info.voting.location.pick} />
-        <div className={style.pickTitle}>{info.voting.location.pick}</div>
-      </div>
+      {selectLocation && (
+        <>
+          <span className={style.pickText}>Сервер</span>
+          <div className={style.pickInformation}>
+            <Image
+              src={selectLocation?.image_sm}
+              alt={info.voting.location.pick}
+            />
+            <div className={style.pickTitle}>{info.voting.location.pick}</div>
+          </div>
+        </>
+      )}
       <span className={style.pickText}>Карта</span>
       <div className={style.pickInformation}>
         <Image src={selectMap?.image_sm} alt={info.voting.map.pick} />

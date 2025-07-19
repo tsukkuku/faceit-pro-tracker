@@ -61,6 +61,7 @@ export interface VotingLabels {
 
 export interface MatchInfo {
   best_of: number;
+  competition_name: string;
   region: string;
   finished_at: number;
   status: string;

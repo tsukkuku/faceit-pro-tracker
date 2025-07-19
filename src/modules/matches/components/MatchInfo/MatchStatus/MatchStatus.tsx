@@ -16,6 +16,7 @@ export const MatchStatus: FC<MatchStatsProps> = ({ status, header }) => {
         </div>
       ))}
       <div className={style.matchStatusInfo}>
+        <div className={style.lobbyName}>{status.competition_name}</div>
         <div className={style.matchStatus}>Завершено</div>
         <div className={style.matchBestOfInfo}>Best of {status?.best_of}</div>
       </div>
