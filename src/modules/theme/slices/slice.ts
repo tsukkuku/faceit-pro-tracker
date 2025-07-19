@@ -1,8 +1,8 @@
+import { getLocalStorage } from "@/shared/helpers";
 import { createSlice } from "@reduxjs/toolkit";
-import { getLocalStorage } from "../helpers/getLocalStorage";
 
 const initialState = {
-  mode: getLocalStorage(),
+  mode: getLocalStorage("theme", "dark"),
 };
 
 export const themeSlice = createSlice({

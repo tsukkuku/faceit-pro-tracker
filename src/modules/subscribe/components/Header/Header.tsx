@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import style from "./Header.module.scss";
 import { Button } from "@/shared/ui";
+import style from "./Header.module.scss";
 
 export const Header = () => {
   const navigate = useNavigate();
+
   return (
     <header className={style.header}>
       <img
@@ -12,7 +13,7 @@ export const Header = () => {
         alt="FACEIT LOGO"
         onClick={() => navigate("/")}
       />
-      <Button>Войти</Button>
+      <Button onClick={() => navigate("/subscribe")}>Мои подписки</Button>
     </header>
   );
 };

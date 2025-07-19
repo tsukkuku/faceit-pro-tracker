@@ -54,3 +54,9 @@
 .subscribeButton {
   margin-left: auto;
 }
+
+.unSubscribe {
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: 1px solid var(--border-profile);
+}

@@ -10,13 +10,27 @@ import { formatDate } from "@/shared/helpers";
 import ReactCountryFlag from "react-country-flag";
 import { Avatar, Button, Image } from "@/shared/ui";
 import { PlayerBanDetails } from "./PlayerBanDetails";
-import { useDocumentTitle } from "@/shared/hooks";
+import {
+  useAppDispatch,
+  useAppSelector,
+  useDocumentTitle,
+} from "@/shared/hooks";
+import { checkSubscribe, subscribe } from "@/modules/subscribe";
 import style from "./PlayerBanner.module.scss";
 
 export const PlayerBanner = () => {
   const { id = "" } = useParams();
   const { data: playerInfo, isError } = useGetPlayerInfoQuery(id);
   const { data: ban } = useGetPlayerBansQuery(id);
+  const dispatch = useAppDispatch();
+  const subscriber = useAppSelector(checkSubscribe(id));
+
+  const subscribeToPlayer = () => {
+    if (playerInfo) {
+      dispatch(subscribe(playerInfo));
+    }
+  };
+
   useDocumentTitle(
     playerInfo ? `Статистика игрока ${playerInfo.nickname}` : "Загрузка..."
   );
@@ -59,7 +73,12 @@ export const PlayerBanner = () => {
             ))}
         </div>
         <div className={style.subscribeButton}>
-          <Button>Подписаться</Button>
+          <Button
+            onClick={subscribeToPlayer}
+            className={subscriber && style.unSubscribe}
+          >
+            {subscriber ? "Отписаться" : "Подписаться"}
+          </Button>
         </div>
       </div>
     </div>

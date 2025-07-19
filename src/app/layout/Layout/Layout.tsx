@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../Header";
-import style from "./Layout.module.scss";
+import { Header } from "@/modules/subscribe";
 import { ThemeToggle } from "@/modules/theme";
+import style from "./Layout.module.scss";
 
 export const Layout = () => {
   return (

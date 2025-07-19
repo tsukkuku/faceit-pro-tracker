@@ -17,6 +17,7 @@ export interface Player {
   country: string;
   games: GameStats;
   verified: boolean;
+  subscribe?: boolean;
 }
 
 export interface Ban {

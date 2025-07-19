@@ -5,6 +5,7 @@ import { HomePage } from "@/pages/home/HomePage";
 import { PlayerPage } from "@/pages/player-page/PlayerPage";
 import { MatchPage } from "@/pages/MatchPage/MatchPage";
 import { MatchStats } from "@/pages/MatchStats/MatchStats";
+import { SubscribesPage } from "@/pages/Subscribes/SubscribesPage";
 
 export const route = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const route = createBrowserRouter([
       {
         path: ROUTES.MATCH_STATS,
         Component: MatchStats,
+      },
+      {
+        path: ROUTES.SUBSCRIBE_PLAYERS,
+        Component: SubscribesPage,
       },
     ],
   },
