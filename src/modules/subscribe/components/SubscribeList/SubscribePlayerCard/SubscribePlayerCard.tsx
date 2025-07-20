@@ -18,7 +18,10 @@ export const SubscribePlayerCard: FC<SubscribePlayerCardProps> = ({
 }) => {
   return (
     <div className={style.subscribePlayerCard}>
-      <Link to={`/player/${player.player_id}`} className={style.link}>
+      <Link
+        to={`/faceit-pro-tracker/player/${player.player_id}`}
+        className={style.link}
+      >
         <div className={style.cardContainer}>
           <div className={style.infoContainer}>
             <Avatar

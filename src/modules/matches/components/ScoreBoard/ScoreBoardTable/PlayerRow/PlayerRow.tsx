@@ -13,7 +13,10 @@ interface PlayerRowProps {
 export const PlayerRow: FC<PlayerRowProps> = ({ id }) => {
   const { data } = useGetPlayerInMatchInfoQuery(id);
   return (
-    <Link to={`/player/${data?.player_id}`} className={style.playerRowCard}>
+    <Link
+      to={`/faceit-pro-tracker/player/${data?.player_id}`}
+      className={style.playerRowCard}
+    >
       <Avatar
         src={data?.avatar}
         alt={data?.nickname}

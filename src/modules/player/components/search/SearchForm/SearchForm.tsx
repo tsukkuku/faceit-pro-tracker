@@ -24,7 +24,7 @@ export const SearchForm = () => {
     }
     try {
       const result = await trigger(value.trim()).unwrap();
-      navigate(`/player/${result.player_id}`);
+      navigate(`/faceit-pro-tracker/player/${result.player_id}`);
     } catch (error: any) {
       setError("Игрок не найден");
     }

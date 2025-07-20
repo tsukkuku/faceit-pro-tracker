@@ -11,9 +11,9 @@ export const Header = () => {
         className={style.logo}
         src="https://corporate.faceit.com/wp-content/uploads/icon-pheasant-preview-2.png"
         alt="FACEIT LOGO"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/faceit-pro-tracker")}
       />
-      <Button onClick={() => navigate("/subscribe")}>Мои подписки</Button>
+      <Button onClick={() => navigate("subscribe")}>Мои подписки</Button>
     </header>
   );
 };

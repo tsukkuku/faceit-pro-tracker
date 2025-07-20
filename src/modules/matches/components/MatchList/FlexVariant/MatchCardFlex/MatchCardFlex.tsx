@@ -20,7 +20,10 @@ export const MatchCardFlex: FC<MatchCardFlexProps> = ({ match }) => {
   };
   return (
     <div className={style.matchCardFlex}>
-      <Link to={`/match/${match.stats["Match Id"]}`} target="_blank" className={style.link}>
+      <Link
+        to={`/faceit-pro-tracker/match/${match.stats["Match Id"]}`}
+        className={style.link}
+      >
         <div className={style.matchCardFlexContent}>
           <div className={style.statsColumn}>
             <div className={style.cardFlexValue} style={{ width: "180px" }}>

@@ -21,8 +21,7 @@ export const MatchCardGrid: FC<MatchCardGridProps> = ({ match }) => {
   return (
     <div className={style.matchCardGrid}>
       <Link
-        to={`/match/${match.stats["Match Id"]}`}
-        target="_blank"
+        to={`/faceit-pro-tracker/match/${match.stats["Match Id"]}`}
         className={style.content}
       >
         <div className={style.matchCardGridImage}>

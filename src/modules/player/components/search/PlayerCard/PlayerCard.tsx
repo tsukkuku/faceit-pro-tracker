@@ -17,7 +17,7 @@ export const PlayerCard: FC<PlayerCardProps> = ({ player }) => {
   return (
     <div
       className={style.playerCard}
-      onClick={() => navigate(`/player/${data?.player_id}`)}
+      onClick={() => navigate(`player/${data?.player_id}`)}
     >
       <Avatar src={data?.avatar} fallback={NO_AVATAR} size="lg" />
       <p className={style.nickname}>

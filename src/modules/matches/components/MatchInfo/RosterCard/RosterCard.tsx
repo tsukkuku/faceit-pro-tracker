@@ -29,7 +29,10 @@ export const RosterCard: FC<RosterCardProps> = ({ roster }) => {
   if (isLoading || isLoadingPosition) return <RosterSkeleton />;
   if (!player?.games.cs2.skill_level) return;
   return (
-    <Link className={style.rosterCard} to={`/player/${player?.player_id}`}>
+    <Link
+      className={style.rosterCard}
+      to={`/faceit-pro-tracker/player/${player?.player_id}`}
+    >
       <div className={style.playerContainer}>
         <div className={style.playerInfo}>
           <div className={style.avatarContainer}>
