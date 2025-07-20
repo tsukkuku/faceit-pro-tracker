@@ -38,9 +38,13 @@ export const ScoreBoardInfo: FC<ScoreBoardInfoProps> = ({
             <p>Поражение</p>
           )}
         </div>
-        <div>First Half Score: {faction?.team_stats["First Half Score"]}</div>
-        <div>Second Half Score: {faction?.team_stats["Second Half Score"]}</div>
-        <div>Final Score: {faction?.team_stats["Final Score"]}</div>
+        <div className={style.factionScores}>
+          <div>First Half Score: {faction?.team_stats["First Half Score"]}</div>
+          <div>
+            Second Half Score: {faction?.team_stats["Second Half Score"]}
+          </div>
+          <div>Final Score: {faction?.team_stats["Final Score"]}</div>
+        </div>
       </div>
     </div>
   );

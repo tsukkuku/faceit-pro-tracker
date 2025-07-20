@@ -17,7 +17,7 @@ export const LastMatchesStats: FC<LastMatchesStatsProps> = ({ id }) => {
   if (isLoading) return;
   return (
     <div className={style.lastMatchesSection}>
-      <h2>Статистика за последние 30 матчей</h2>
+      <h2 className={style.sectionTitle}>Статистика за последние 30 матчей</h2>
       <div className={style.lastMatchesContent}>
         <StatsCard value={kills} wrapper="Average Kills" />
         <StatsCard value={winRate} wrapper="Win Rate %" />

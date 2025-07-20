@@ -10,31 +10,33 @@ interface SortArray {
 
 export const ScoreBoardTable: FC<SortArray> = ({ sortArray }) => {
   return (
-    <table className={style.scoreBoard}>
-      <thead className={style.scoreBoardHeader}>
-        <tr className={style.scoreBoardRow}>
-          <th className={style.scoreBoardPlayer}>Игрок</th>
-          {MATCH_STATS_HEADER.map((name) => (
-            <th key={name} className={style.scoreBoardTitles}>
-              {name}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {sortArray?.map((player) => (
-          <tr className={style.scoreBoardRow} key={player.player_id}>
-            <td className={style.playerRow}>
-              <PlayerRow id={player.player_id} />
-            </td>
-            {MATCH_STATS_HEADER.map((value) => (
-              <td key={value} className={style.playerRowStats}>
-                {player.player_stats[value]}
-              </td>
+    <div className={style.tableScroll}>
+      <table className={style.scoreBoard}>
+        <thead className={style.scoreBoardHeader}>
+          <tr className={style.scoreBoardRow}>
+            <th className={style.scoreBoardPlayer}>Игрок</th>
+            {MATCH_STATS_HEADER.map((name) => (
+              <th key={name} className={style.scoreBoardTitles}>
+                {name}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sortArray?.map((player) => (
+            <tr className={style.scoreBoardRow} key={player.player_id}>
+              <td className={style.playerRow}>
+                <PlayerRow id={player.player_id} />
+              </td>
+              {MATCH_STATS_HEADER.map((value) => (
+                <td key={value} className={style.playerRowStats}>
+                  {player.player_stats[value]}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };

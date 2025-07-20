@@ -90,3 +90,26 @@
     font-weight: 700;
   }
 }
+
+@media (max-width: 460px) {
+  .rosterCard {
+    width: 100%;
+  }
+  .playerContainer {
+    width: 300px;
+  }
+  .nickname {
+    width: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .playerElo {
+    display: none;
+  }
+  .playerTop {
+    button {
+      width: 90px;
+    }
+  }
+}

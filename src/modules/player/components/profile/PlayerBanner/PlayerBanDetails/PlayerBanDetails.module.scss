@@ -6,3 +6,10 @@
   font-weight: 700;
   color: rgba(255, 3, 45, 0.75);
 }
+
+@media (max-width: 768px) {
+  .banInfo {
+    justify-content: center;
+    align-items: center;
+  }
+}

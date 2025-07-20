@@ -1,8 +1,12 @@
+.tableScroll {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 .scoreBoard {
   width: 100%;
   color: var(--text-color);
   border-collapse: collapse;
-  margin-bottom: 50px;
 }
 
 .scoreBoardHeader {
@@ -36,8 +40,15 @@
 .playerRowStats {
   font-weight: 700;
   padding: 8px 10px;
+  vertical-align: middle;
 }
 
 .playerInformation {
   width: 250px;
+}
+
+@media (max-width: 900px) {
+  .tableScroll {
+    overflow-x: auto !important;
+  }
 }

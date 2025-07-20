@@ -8,3 +8,14 @@
   place-items: center;
   gap: 15px;
 }
+
+@media (max-width: 1400px) {
+  .matchGridSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 920px) {
+  .matchGridSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

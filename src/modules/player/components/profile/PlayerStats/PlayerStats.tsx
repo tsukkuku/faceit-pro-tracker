@@ -21,7 +21,7 @@ export const PlayerStats = () => {
   if (!data) return <p>У игрока нету статистики в Counter Strike 2</p>;
   return (
     <div className={style.playerStatsSection}>
-      <h1>Статистика за всё время</h1>
+      <h1 className={style.allTimeStats}>Статистика за всё время</h1>
       <div className={style.statsCardsContainer}>
         {STATS_CARD.map((stat) => (
           <StatsCard key={stat} value={data.lifetime[stat]} wrapper={stat} />

@@ -2,8 +2,9 @@
   width: 1440px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+  overflow-x: auto;
 }
 
 .backButton {
@@ -12,4 +13,28 @@
   justify-content: start;
   align-items: center;
   margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .matchStatsSection {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 900px) {
+  .matchStatsSection {
+    max-width: 750px;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 800px) {
+  .matchStatsSection {
+    max-width: 550px;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .matchStatsSection {
+    max-width: 350px;
+    overflow-x: hidden;
+  }
 }

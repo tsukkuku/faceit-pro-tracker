@@ -73,3 +73,12 @@
     opacity: 0.5;
   }
 }
+
+@media (max-width: 460px) {
+  .rosterSkeleton {
+    width: 100%;
+  }
+  .rosterSkeletonContainer {
+    width: 370px;
+  }
+}

@@ -1,5 +1,5 @@
 .statsCard {
-  width: 228px;
+  width: 100%;
   height: 118px;
   border: 1px solid var(--btn-border);
   border-radius: 7px;
@@ -44,4 +44,10 @@
 
 .statResultValueLose {
   color: #ff002b;
+}
+
+@media (max-width: 768px) {
+  .statsCard {
+    width: 300px;
+  }
 }

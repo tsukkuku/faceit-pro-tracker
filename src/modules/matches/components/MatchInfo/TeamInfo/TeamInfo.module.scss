@@ -57,3 +57,13 @@
 .winner {
   color: #32d35a;
 }
+
+@media (max-width: 760px) {
+  .secondFaction {
+    flex-direction: row;
+  }
+  .factionSecondScore {
+    width: 58px;
+    text-align: end;
+  }
+}

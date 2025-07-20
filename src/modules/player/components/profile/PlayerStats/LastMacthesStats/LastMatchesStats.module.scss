@@ -2,8 +2,21 @@
   margin-top: 55px;
 }
 
+.sectionTitle {
+  font-size: 18px !important;
+}
+
 .lastMatchesContent {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    text-align: center;
+  }
+  .lastMatchesContent {
+    flex-direction: column;
+  }
 }

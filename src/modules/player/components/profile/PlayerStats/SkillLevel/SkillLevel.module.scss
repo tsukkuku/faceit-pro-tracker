@@ -23,3 +23,9 @@
     height: 50px;
   }
 }
+
+@media (max-width: 768px) {
+  .skillLevelContainer {
+    width: 300px;
+  }
+}

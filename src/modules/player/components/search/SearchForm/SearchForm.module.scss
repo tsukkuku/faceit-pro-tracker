@@ -1,5 +1,5 @@
 .searchForm {
-  width: 750px;
+  min-width: 750px;
   margin-bottom: 50px;
 }
 
@@ -23,5 +23,16 @@
 
   &:focus {
     border: 1px solid rgba(255, 0, 0, 0.6);
+  }
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    min-width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .searchForm {
+    min-width: 350px;
   }
 }

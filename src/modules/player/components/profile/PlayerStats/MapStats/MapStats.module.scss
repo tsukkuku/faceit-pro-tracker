@@ -48,3 +48,14 @@
   margin-bottom: 30px;
   margin-left: auto;
 }
+
+@media (max-width: 768px) {
+  .tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .mostPlayedMaps {
+    flex-direction: column;
+    gap: 25px;
+  }
+}

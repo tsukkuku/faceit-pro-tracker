@@ -32,36 +32,40 @@ export const MapStats: FC<MapStatsProps> = ({ stats }) => {
         {!visible ? "Подробнее" : "Свернуть"}
       </Button>
       {visible && (
-        <table className={style.mapStatsTable}>
-          <thead>
-            <tr className={style.mapRow}>
-              <th className={`${style.mapHeadNames} ${style.mapCell}`}>Map</th>
-              {KEYS.map((key) => (
-                <th
-                  key={key}
-                  className={`${style.mapHeadNames} ${style.mapCell}`}
-                >
-                  {key}
+        <div className={style.tableWrapper}>
+          <table className={style.mapStatsTable}>
+            <thead>
+              <tr className={style.mapRow}>
+                <th className={`${style.mapHeadNames} ${style.mapCell}`}>
+                  Map
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {sortedArray.map((item) => (
-              <tr key={item.label} className={style.mapRow}>
-                <td className={style.mapCell}>{item.label}</td>
                 {KEYS.map((key) => (
-                  <td
+                  <th
                     key={key}
-                    className={`${style.mapStatsInfo} ${style.mapCell}`}
+                    className={`${style.mapHeadNames} ${style.mapCell}`}
                   >
-                    {item.stats[key]}
-                  </td>
+                    {key}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {sortedArray.map((item) => (
+                <tr key={item.label} className={style.mapRow}>
+                  <td className={style.mapCell}>{item.label}</td>
+                  {KEYS.map((key) => (
+                    <td
+                      key={key}
+                      className={`${style.mapStatsInfo} ${style.mapCell}`}
+                    >
+                      {item.stats[key]}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </>
   );

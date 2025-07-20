@@ -3,15 +3,24 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-color);
-  padding: 0 35px;
+  padding-inline: 35px;
   color: var(--text-color);
   height: 5rem;
   box-shadow: 0 2px rgb(0, 0, 0, 0.2);
   transition: 0.3s;
+}
 
+.logo {
+  width: 200px;
+  height: 90px;
+  cursor: pointer;
+}
+
+@media (max-width: 415px) {
+  .header {
+    padding-inline: 10px;
+  }
   .logo {
-    width: 200px;
-    height: 90px;
-    cursor: pointer;
+    width: 170px;
   }
 }

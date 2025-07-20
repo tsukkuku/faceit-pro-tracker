@@ -1,4 +1,6 @@
 .matchInfoSection {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +24,7 @@
 }
 
 .matchRoster {
-  width: 1440px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -37,4 +39,19 @@
 
 .factionSecondRoster {
   @extend .factionFirstRoster;
+}
+
+@media (max-width: 1205px) {
+  .matchRoster {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 760px) {
+  .teamsInfo {
+    flex-direction: column;
+  }
 }

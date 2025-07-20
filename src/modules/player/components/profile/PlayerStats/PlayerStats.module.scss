@@ -1,4 +1,5 @@
 .playerStatsSection {
+  width: 100%;
   max-width: 1440px;
 
   h1,
@@ -6,6 +7,7 @@
   h3,
   h4,
   h5 {
+    width: 100%;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -37,8 +39,21 @@
   align-items: start;
   flex-direction: column;
   margin-bottom: 40px;
+}
 
+@media (max-width: 768px) {
+  .allTimeStats,
+  h3,
   .mapStatsTitle {
-    @extend h1;
+    width: 500px;
+    text-align: center;
+  }
+  .statsCardsContainer {
+    flex-direction: column;
+  }
+  .skillLevelSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

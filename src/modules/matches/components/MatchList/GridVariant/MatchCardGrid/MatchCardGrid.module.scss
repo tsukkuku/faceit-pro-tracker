@@ -38,7 +38,7 @@
 .matchInfo {
   display: flex;
   flex-direction: column;
-  padding-inline: 10px;
+  padding: 10px;
   gap: 15px;
 }
 
@@ -107,4 +107,18 @@
   text-transform: uppercase;
   color: #ff002b;
   font-weight: 700;
+}
+
+@media (max-width: 437px) {
+  .matchCardGrid {
+    width: 340px;
+  }
+
+  .dateText {
+    width: 100px;
+  }
+
+  .resultText {
+    width: 130px;
+  }
 }
